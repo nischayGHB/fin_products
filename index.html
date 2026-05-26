@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Markets: Complete Institutional Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #07080f;
+  --bg2: #0e1020;
+  --bg3: #161829;
+  --bg4: #1e2035;
+  --border: #2a2d4a;
+  --border2: #3a3f6a;
+  --gold: #e8a020;
+  --gold2: #f5c060;
+  --text: #cdd0e8;
+  --text2: #8890b8;
+  --text3: #555e8a;
+  --teal: #3eb8b0;
+  --coral: #e05a5a;
+  --lavender: #9d9fdb;
+  --green: #4eb87a;
+  --nav-w: 260px;
+  --font-sans: 'Barlow', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-serif: 'Libre Baskerville', serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-sans);font-size:15px;line-height:1.75;display:flex;min-height:100vh;overflow-x:hidden;}
+
+/* ───── NAV ───── */
+#nav{width:var(--nav-w);flex-shrink:0;background:var(--bg2);border-right:1px solid var(--border);height:100vh;position:sticky;top:0;overflow-y:auto;display:flex;flex-direction:column;}
+#nav-header{padding:22px 20px 16px;border-bottom:1px solid var(--border);}
+#nav-header .title{font-family:var(--font-mono);font-size:11px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;}
+#nav-header .sub{font-size:12px;color:var(--text3);margin-top:4px;line-height:1.4;}
+#nav-search{padding:12px 16px;border-bottom:1px solid var(--border);}
+#nav-search input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:7px 10px;font-family:var(--font-mono);font-size:12px;color:var(--text);outline:none;}
+#nav-search input:focus{border-color:var(--gold);}
+#nav-search input::placeholder{color:var(--text3);}
+.nav-section{padding:12px 16px 4px;}
+.nav-section-label{font-family:var(--font-mono);font-size:10px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;}
+.nav-item{display:block;padding:5px 10px;margin:1px 0;border-radius:3px;font-size:13px;color:var(--text2);text-decoration:none;cursor:pointer;transition:all .15s;border:none;background:none;width:100%;text-align:left;}
+.nav-item:hover,.nav-item.active{background:var(--bg4);color:var(--gold);border-left:2px solid var(--gold);padding-left:8px;}
+.nav-item span{font-family:var(--font-mono);font-size:10px;color:var(--text3);float:right;margin-top:2px;}
+
+/* ───── MAIN ───── */
+#main{flex:1;overflow-y:auto;height:100vh;}
+#content{max-width:960px;margin:0 auto;padding:40px 48px 120px;}
+
+/* ───── HERO ───── */
+.hero{margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid var(--border);}
+.hero-tag{font-family:var(--font-mono);font-size:11px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px;}
+.hero h1{font-family:var(--font-serif);font-size:40px;font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;}
+.hero h1 em{color:var(--gold);font-style:normal;}
+.hero-desc{font-size:16px;color:var(--text2);line-height:1.8;max-width:720px;}
+.hero-stats{display:flex;gap:32px;margin-top:28px;flex-wrap:wrap;}
+.hero-stat{font-family:var(--font-mono);}
+.hero-stat .n{font-size:22px;color:var(--gold2);font-weight:500;}
+.hero-stat .l{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:2px;}
+
+/* ───── SECTIONS ───── */
+.section{margin-bottom:80px;scroll-margin-top:32px;}
+.section-header{margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid var(--border);}
+.section-tag{font-family:var(--font-mono);font-size:10px;color:var(--teal);letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px;}
+.section h2{font-family:var(--font-serif);font-size:28px;color:#fff;font-weight:700;margin-bottom:8px;}
+.section-intro{font-size:15px;color:var(--text2);line-height:1.85;}
+.subsection{margin-bottom:48px;}
+.subsection h3{font-family:var(--font-sans);font-size:17px;font-weight:600;color:var(--gold2);margin-bottom:14px;padding-left:12px;border-left:2px solid var(--gold);display:flex;align-items:center;gap:8px;}
+.subsection h4{font-size:14px;font-weight:600;color:var(--lavender);margin:20px 0 10px;text-transform:uppercase;letter-spacing:.06em;}
+p{margin-bottom:14px;color:var(--text);}
+
+/* ───── CALLOUTS ───── */
+.callout{border-radius:4px;padding:16px 20px;margin:20px 0;border-left:3px solid;}
+.callout.key{background:rgba(232,160,32,.06);border-color:var(--gold);}
+.callout.risk{background:rgba(224,90,90,.06);border-color:var(--coral);}
+.callout.formula{background:rgba(62,184,176,.06);border-color:var(--teal);}
+.callout.inst{background:rgba(157,159,219,.06);border-color:var(--lavender);}
+.callout-tag{font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.callout.key .callout-tag{color:var(--gold);}
+.callout.risk .callout-tag{color:var(--coral);}
+.callout.formula .callout-tag{color:var(--teal);}
+.callout.inst .callout-tag{color:var(--lavender);}
+.callout p{margin-bottom:0;font-size:14px;line-height:1.7;}
+
+/* ───── FORMULA ───── */
+.formula-block{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:20px 24px;margin:16px 0;font-family:var(--font-mono);font-size:13px;color:var(--teal);line-height:2;overflow-x:auto;}
+.formula-block .f-title{font-size:10px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;font-family:var(--font-sans);}
+.formula-block .f-var{color:var(--text2);font-size:12px;margin-top:10px;line-height:1.9;}
+.formula-block .f-var span{color:var(--gold2);}
+
+/* ───── TABLES ───── */
+.data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px;}
+.data-table th{background:var(--bg3);border:1px solid var(--border);padding:10px 14px;text-align:left;font-family:var(--font-mono);font-size:11px;color:var(--text2);letter-spacing:.08em;text-transform:uppercase;font-weight:500;}
+.data-table td{border:1px solid var(--border);padding:9px 14px;color:var(--text);vertical-align:top;line-height:1.6;}
+.data-table tr:hover td{background:var(--bg3);}
+.data-table td.mono{font-family:var(--font-mono);font-size:12px;color:var(--teal);}
+.data-table td.gold{font-family:var(--font-mono);font-size:12px;color:var(--gold2);}
+.data-table td.coral{font-family:var(--font-mono);font-size:12px;color:var(--coral);}
+.data-table td.green{font-family:var(--font-mono);font-size:12px;color:var(--green);}
+
+/* ───── GRID CARDS ───── */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:20px 0;}
+.card{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:18px 20px;}
+.card:hover{border-color:var(--border2);}
+.card-label{font-family:var(--font-mono);font-size:10px;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;}
+.card-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:6px;}
+.card-body{font-size:13px;color:var(--text2);line-height:1.65;}
+.card.gold-accent{border-top:2px solid var(--gold);}
+.card.teal-accent{border-top:2px solid var(--teal);}
+.card.coral-accent{border-top:2px solid var(--coral);}
+.card.lavender-accent{border-top:2px solid var(--lavender);}
+
+/* ───── TICKER ROW ───── */
+.ticker-row{display:flex;gap:20px;overflow-x:auto;padding:14px 0;margin-bottom:32px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.ticker-item{display:flex;flex-direction:column;gap:2px;min-width:90px;}
+.ticker-item .sym{font-family:var(--font-mono);font-size:12px;color:var(--text3);}
+.ticker-item .val{font-family:var(--font-mono);font-size:14px;color:#fff;font-weight:500;}
+.ticker-item .chg.up{color:var(--green);font-size:11px;font-family:var(--font-mono);}
+.ticker-item .chg.dn{color:var(--coral);font-size:11px;font-family:var(--font-mono);}
+
+/* ───── COMPARISON ───── */
+.compare-row{display:flex;gap:0;margin:16px 0;border:1px solid var(--border);border-radius:4px;overflow:hidden;}
+.compare-col{flex:1;padding:16px 18px;border-right:1px solid var(--border);}
+.compare-col:last-child{border-right:none;}
+.compare-col h4{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;color:var(--gold2);}
+.compare-col ul{list-style:none;font-size:13px;color:var(--text2);}
+.compare-col ul li{padding:3px 0;border-bottom:1px solid var(--border);}
+.compare-col ul li:last-child{border-bottom:none;}
+.compare-col ul li::before{content:"› ";color:var(--text3);}
+
+/* ───── RISK MATRIX ───── */
+.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0;}
+.risk-cell{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:14px 16px;}
+.risk-cell .r-label{font-family:var(--font-mono);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;}
+.risk-cell .r-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:4px;}
+.risk-cell .r-body{font-size:12px;color:var(--text2);line-height:1.6;}
+.risk-cell.high{border-left:3px solid var(--coral);}
+.risk-cell.med{border-left:3px solid var(--gold);}
+.risk-cell.low{border-left:3px solid var(--green);}
+
+/* ───── FLOW DIAGRAM ───── */
+.flow{display:flex;align-items:center;gap:0;margin:20px 0;flex-wrap:wrap;}
+.flow-node{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:10px 16px;font-size:13px;color:var(--text);text-align:center;min-width:100px;}
+.flow-node.gold{border-color:var(--gold);color:var(--gold2);}
+.flow-node.teal{border-color:var(--teal);color:var(--teal);}
+.flow-node.coral{border-color:var(--coral);color:var(--coral);}
+.flow-arrow{color:var(--text3);font-size:20px;padding:0 8px;}
+
+/* ───── TERM ───── */
+.term{font-family:var(--font-mono);font-size:12px;color:var(--teal);background:rgba(62,184,176,.08);padding:1px 6px;border-radius:2px;}
+.highlight{color:var(--gold2);}
+.em{color:#fff;font-weight:600;}
+
+/* ───── TOC ───── */
+.toc{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:20px 24px;margin-bottom:40px;}
+.toc h3{font-family:var(--font-mono);font-size:11px;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;}
+.toc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 24px;}
+.toc-item{font-size:13px;color:var(--text2);cursor:pointer;padding:3px 0;text-decoration:none;display:block;transition:color .15s;}
+.toc-item:hover{color:var(--gold);}
+.toc-item span{font-family:var(--font-mono);font-size:11px;color:var(--text3);margin-right:8px;}
+
+/* ───── SCROLLBAR ───── */
+::-webkit-scrollbar{width:6px;height:6px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════ -->
+<nav id="nav">
+  <div id="nav-header">
+    <div class="title">Financial Markets</div>
+    <div class="sub">Institutional Reference — All Asset Classes</div>
+  </div>
+  <div id="nav-search">
+    <input type="text" id="search-input" placeholder="Search topics..." oninput="filterNav(this.value)">
+  </div>
+
+  <div class="nav-section"><div class="nav-section-label">Overview</div>
+    <button class="nav-item active" onclick="scrollTo('overview')">Market Architecture <span>§1</span></button>
+    <button class="nav-item" onclick="scrollTo('participants')">Participants & Infrastructure <span>§2</span></button>
+  </div>
+
+  <div class="nav-section"><div class="nav-section-label">Equities</div>
+    <button class="nav-item" onclick="scrollTo('equities')">Equity Markets <span>§3</span></button>
+    <button class="nav-item" onclick="scrollTo('microstructure')">Market Microstructure <span>§4</span></button>
+    <button class="nav-item" onclick="scrollTo('etfs')">ETFs & Index Products <span>§5</span></button>
+  </div>
+
+  <div class="nav-section"><div class="nav-section-label">Fixed Income</div>
+    <button class="nav-item" onclick="scrollTo('bonds')">Bond Mechanics & Pricing <span>§6</span></button>
+    <button class="nav-item" onclick="scrollTo('rates')">Rates & Yield Curves <span>§7</span></button>
+    <button class="nav-item" onclick="scrollTo('credit')">Credit & Spreads <span>§8</span></button>
+    <button class="nav-item" onclick="scrollTo('repo')">Repo & Money Markets <span>§9</span></button>
+  </div>
+
+  <div class="nav-section"><div class="nav-section-label">Derivatives</div>
+    <button class="nav-item" onclick="scrollTo('futures')">Futures & Forwards <span>§10</span></button>
+    <button class="nav-item" onclick="scrollTo('options')">Options Theory <span>§11</span></button>
+    <button class="nav-item" onclick="scrollTo('greeks')">The Greeks <span>§12</span></button>
+    <button class="nav-item" onclick="scrollTo('volsurface')">Volatility Surface <span>§13</span></button>
+    <button class="nav-item" onclick="scrollTo('exotics')">Exotic Options <span>§14</span></button>
+  </div>
+
+  <div class="nav-section"><div class="nav-section-label">Swaps & OTC</div>
+    <button class="nav-item" onclick="scrollTo('irs')">Interest Rate Swaps <span>§15</span></button>
+    <button class="nav-item" onclick="scrollTo('cds')">Credit Default Swaps <span>§16</span></button>
+    <button class="nav-item" onclick="scrollTo('xccy')">Cross-Currency Swaps <span>§17</span></button>
+    <button class="nav-item" onclick="scrollTo('otc-infra')">OTC Infrastructure <span>§18</span></button>
+  </div>
+
+  <div class="nav-section"><div class="nav-section-label">FX</div>
+    <button class="nav-item" onclick="scrollTo('fx-spot')">FX Spot & Forwards <span>§19</span></button>
+    <button class="nav-item" onclick="scrollTo('carry')">Carry & NDF <span>§20</span></button>
+  </div>
+
+  <div class="nav-section"><div class="nav-section-label">Commodities</div>
+    <button class="nav-item" onclick="scrollTo('commodities')">Commodity Markets <span>§21</span></button>
+    <button class="nav-item" onclick="scrollTo('energy')">Energy & Curves <span>§22</span></button>
+  </div>
+
+  <div class="nav-section"><div class="nav-section-label">Crypto</div>
+    <button class="nav-item" onclick="scrollTo('crypto')">Crypto Structure <span>§23</span></button>
+    <button class="nav-item" onclick="scrollTo('defi')">DeFi & Perps <span>§24</span></button>
+  </div>
+
+  <div class="nav-section"><div class="nav-section-label">Risk & Portfolio</div>
+    <button class="nav-item" onclick="scrollTo('risk')">Risk Framework <span>§25</span></button>
+    <button class="nav-item" onclick="scrollTo('portfolio')">Portfolio Construction <span>§26</span></button>
+    <button class="nav-item" onclick="scrollTo('cross-asset')">Cross-Asset Linkages <span>§27</span></button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════════════════════ -->
+<main id="main">
+<div id="content">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Complete Institutional Reference</div>
+  <h1>Financial Markets:<br><em>Everything.</em></h1>
+  <p class="hero-desc">A comprehensive technical reference covering every major asset class, instrument type, pricing framework, risk dimension, and institutional mechanism — built for professional desks. From bond duration to perpetual futures funding rates, from repo haircuts to volatility skew dynamics.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="n">27</div><div class="l">Sections</div></div>
+    <div class="hero-stat"><div class="n">12+</div><div class="l">Asset Classes</div></div>
+    <div class="hero-stat"><div class="n">200+</div><div class="l">Topics</div></div>
+    <div class="hero-stat"><div class="n">50+</div><div class="l">Formulas</div></div>
+  </div>
+</div>
+
+<!-- QUICK TOC -->
+<div class="toc">
+  <h3>Table of Contents</h3>
+  <div class="toc-grid">
+    <a class="toc-item" onclick="scrollTo('overview')"><span>§1</span>Market Architecture</a>
+    <a class="toc-item" onclick="scrollTo('options')"><span>§11</span>Options Theory</a>
+    <a class="toc-item" onclick="scrollTo('participants')"><span>§2</span>Participants & Infrastructure</a>
+    <a class="toc-item" onclick="scrollTo('greeks')"><span>§12</span>The Greeks</a>
+    <a class="toc-item" onclick="scrollTo('equities')"><span>§3</span>Equity Markets</a>
+    <a class="toc-item" onclick="scrollTo('volsurface')"><span>§13</span>Volatility Surface</a>
+    <a class="toc-item" onclick="scrollTo('microstructure')"><span>§4</span>Market Microstructure</a>
+    <a class="toc-item" onclick="scrollTo('exotics')"><span>§14</span>Exotic Options</a>
+    <a class="toc-item" onclick="scrollTo('etfs')"><span>§5</span>ETFs & Index Products</a>
+    <a class="toc-item" onclick="scrollTo('irs')"><span>§15</span>Interest Rate Swaps</a>
+    <a class="toc-item" onclick="scrollTo('bonds')"><span>§6</span>Bond Mechanics</a>
+    <a class="toc-item" onclick="scrollTo('cds')"><span>§16</span>Credit Default Swaps</a>
+    <a class="toc-item" onclick="scrollTo('rates')"><span>§7</span>Rates & Yield Curves</a>
+    <a class="toc-item" onclick="scrollTo('xccy')"><span>§17</span>Cross-Currency Swaps</a>
+    <a class="toc-item" onclick="scrollTo('credit')"><span>§8</span>Credit & Spreads</a>
+    <a class="toc-item" onclick="scrollTo('otc-infra')"><span>§18</span>OTC Infrastructure</a>
+    <a class="toc-item" onclick="scrollTo('repo')"><span>§9</span>Repo & Money Markets</a>
+    <a class="toc-item" onclick="scrollTo('fx-spot')"><span>§19</span>FX Spot & Forwards</a>
+    <a class="toc-item" onclick="scrollTo('futures')"><span>§10</span>Futures & Forwards</a>
+    <a class="toc-item" onclick="scrollTo('risk')"><span>§25</span>Risk Framework</a>
+    <a class="toc-item" onclick="scrollTo('commodities')"><span>§21</span>Commodity Markets</a>
+    <a class="toc-item" onclick="scrollTo('portfolio')"><span>§26</span>Portfolio Construction</a>
+    <a class="toc-item" onclick="scrollTo('crypto')"><span>§23</span>Crypto Structure</a>
+    <a class="toc-item" onclick="scrollTo('cross-asset')"><span>§27</span>Cross-Asset Linkages</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §1 MARKET ARCHITECTURE -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="overview">
+  <div class="section-header">
+    <div class="section-tag">§1 — Foundation</div>
+    <h2>Market Architecture & Taxonomy</h2>
+    <p class="section-intro">Financial markets are not monolithic. They are a collection of distinct ecosystems — each with its own price discovery mechanism, clearing infrastructure, participant set, liquidity regime, and risk topology. Understanding the architecture before the instruments is mandatory.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>The Market Taxonomy</h3>
+    <p>Financial markets partition along three primary axes: <span class="em">venue type</span> (exchange vs. OTC), <span class="em">instrument class</span> (spot, derivative, structured), and <span class="em">settlement mechanism</span> (physical vs. cash, T+0 to T+2 to long-dated). These axes combine to create dozens of distinct market structures with materially different risk, liquidity, and operational characteristics.</p>
+
+    <div class="card-grid">
+      <div class="card gold-accent">
+        <div class="card-label">Exchange-Traded</div>
+        <div class="card-title">Centralized Price Discovery</div>
+        <div class="card-body">Standardized contracts, central limit order books (CLOB), central clearing via CCP. Price is public and continuous. Examples: equity shares, listed futures, listed options. Margin is segregated via CCP rulebook.</div>
+      </div>
+      <div class="card teal-accent">
+        <div class="card-label">OTC Markets</div>
+        <div class="card-title">Bilateral Negotiation</div>
+        <div class="card-body">Bespoke terms, bilateral credit risk (or cleared via CCP post-Dodd-Frank/EMIR). Price is discovered via dealer quotes (RFQ). Examples: IRS, CDS, FX forwards, structured products. ISDA framework governs legal relationships.</div>
+      </div>
+      <div class="card coral-accent">
+        <div class="card-label">Dark & Alternative</div>
+        <div class="card-title">Off-Exchange Execution</div>
+        <div class="card-body">Dark pools, crossing networks, internalization. No pre-trade transparency. Used by institutions to minimize market impact. Subject to best execution rules (MiFID II, Reg NMS). ~35-40% of US equity volume is off-exchange.</div>
+      </div>
+      <div class="card lavender-accent">
+        <div class="card-label">Primary Markets</div>
+        <div class="card-title">Capital Formation</div>
+        <div class="card-body">IPOs, bond issuance, secondary offerings, rights issues. Price is set via bookbuilding or Dutch auction. Underwriters (investment banks) bridge issuers and institutional investors. The only moment of true "new money" entering a security.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3>Asset Class Map</h3>
+    <p>Every position taken in financial markets is ultimately an exposure to one or more of the following fundamental risk factors. Instruments differ in how they package, leverage, and combine these exposures.</p>
+
+    <table class="data-table">
+      <thead><tr><th>Asset Class</th><th>Primary Exposure</th><th>Key Sub-Markets</th><th>Settlement</th><th>Typical Leverage</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Equities</strong></td><td>Corporate earnings growth, multiple expansion</td><td>Large-cap, small-cap, sectors, international, frontier</td><td class="mono">T+1 (US), T+2 (EU)</td><td class="gold">1x–4x (retail–prime)</td></tr>
+        <tr><td><strong>Government Bonds</strong></td><td>Risk-free rate, duration, inflation</td><td>Bills, Notes, Bonds; Linkers; Bunds; JGBs; Gilts</td><td class="mono">T+1 (US Tsy)</td><td class="gold">5x–30x (repo leverage)</td></tr>
+        <tr><td><strong>Corporate Bonds</strong></td><td>Duration + credit spread (issuer-specific)</td><td>IG, HY, Distressed, EM, Subordinated/AT1</td><td class="mono">T+2 (OTC)</td><td class="gold">3x–10x</td></tr>
+        <tr><td><strong>FX Spot</strong></td><td>Interest rate differentials, terms of trade</td><td>G10, EM, Exotic pairs, Crosses</td><td class="mono">T+2 (spot)</td><td class="gold">50x–500x (retail–dealer)</td></tr>
+        <tr><td><strong>Futures</strong></td><td>Varies by underlying; includes basis risk</td><td>Equity, Rate, FX, Commodity, Credit, Vol futures</td><td class="mono">Daily MTM</td><td class="gold">10x–50x (initial margin)</td></tr>
+        <tr><td><strong>Options</strong></td><td>Directional + volatility + convexity</td><td>Equity, Rate, FX, Commodity, Credit options</td><td class="mono">T+1 (premium)</td><td class="gold">100x+ (long options)</td></tr>
+        <tr><td><strong>Interest Rate Swaps</strong></td><td>Duration, curve shape, basis</td><td>Vanilla IRS, basis swaps, OIS, SOFR, SONIA</td><td class="mono">T+2 (effective)</td><td class="gold">20x–100x (notional)</td></tr>
+        <tr><td><strong>CDS</strong></td><td>Credit spread, jump-to-default, recovery rate</td><td>Single-name, index (CDX/iTraxx), tranches</td><td class="mono">T+3 (auction)</td><td class="gold">10x–50x</td></tr>
+        <tr><td><strong>Commodities</strong></td><td>Supply/demand, storage, weather, geopolitics</td><td>Energy, Metals (precious/base), Agriculture</td><td class="mono">Physical or cash</td><td class="gold">5x–20x (futures margin)</td></tr>
+        <tr><td><strong>Crypto</strong></td><td>Speculative demand, network utility, liquidity</td><td>BTC, ETH, Alt-L1, DeFi, NFT, Stables</td><td class="mono">Near-instant (on-chain)</td><td class="gold">1x–125x (perp margin)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3>The Price Discovery Hierarchy</h3>
+    <p>Prices in financial markets are not simply "discovered" — they flow through a hierarchy of venues and mechanisms. Understanding this hierarchy explains why the same economic fact can manifest differently across markets.</p>
+    <div class="flow">
+      <div class="flow-node gold">Macro Event / Data Release</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">Futures / Deep Liquidity</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">ETF Market</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node teal">Underlying Spot / Cash Bond</div>
+    </div>
+    <p>In equity markets, S&P 500 futures typically lead the cash index during high-volatility events. In fixed income, Treasury futures and OTC swaps price first; dealer spreads in cash bonds widen. ETFs can trade at premium or discount to NAV during stress. Arbitrageurs close these gaps — creating the basis dynamics that sophisticated traders exploit.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §2 PARTICIPANTS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="participants">
+  <div class="section-header">
+    <div class="section-tag">§2 — Infrastructure</div>
+    <h2>Participants & Market Infrastructure</h2>
+    <p class="section-intro">Every transaction in financial markets involves a specific set of participants, each with distinct roles, incentives, regulatory constraints, and risk capacities. The plumbing — clearing, settlement, custody, margin — determines what can actually be executed and at what cost.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Participant Ecosystem</h3>
+    <table class="data-table">
+      <thead><tr><th>Participant</th><th>Role</th><th>Primary Objective</th><th>Key Risk</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Central Banks</strong></td><td>Monetary policy, lender of last resort, FX intervention</td><td>Price stability, financial stability</td><td class="coral">Credibility loss, policy error</td></tr>
+        <tr><td><strong>Commercial Banks</strong></td><td>Deposit-taking, lending, market-making in rates/FX</td><td>Net interest margin, fee income</td><td class="coral">Credit risk, duration mismatch</td></tr>
+        <tr><td><strong>Investment Banks (Dealers)</strong></td><td>Underwriting, trading, market-making, structuring</td><td>Trading P&L, advisory fees</td><td class="coral">Inventory risk, counterparty risk</td></tr>
+        <tr><td><strong>Hedge Funds</strong></td><td>Absolute return across all strategies and asset classes</td><td>Risk-adjusted alpha, leverage efficiency</td><td class="coral">Drawdown, redemption risk, margin calls</td></tr>
+        <tr><td><strong>Asset Managers</strong></td><td>Long-only equity and fixed income for institutional clients</td><td>Benchmark outperformance, AUM growth</td><td class="coral">Tracking error, capacity constraints</td></tr>
+        <tr><td><strong>Pension Funds</strong></td><td>Long-duration liability matching, equity allocation</td><td>Funding ratio, liability coverage</td><td class="coral">Duration mismatch, longevity risk</td></tr>
+        <tr><td><strong>Insurance Companies</strong></td><td>Fixed income heavy, ALM-driven</td><td>Regulatory capital efficiency, liability match</td><td class="coral">Interest rate sensitivity, credit defaults</td></tr>
+        <tr><td><strong>Market Makers / HFT</strong></td><td>Two-sided quotes, latency arbitrage, liquidity provision</td><td>Spread capture, inventory management</td><td class="coral">Adverse selection, inventory gaps</td></tr>
+        <tr><td><strong>Retail Investors</strong></td><td>Long-only equity/fund via brokers</td><td>Long-term wealth accumulation</td><td class="coral">Behavioral biases, concentration</td></tr>
+        <tr><td><strong>Corporates</strong></td><td>FX hedging, rate hedging, capital markets access</td><td>Risk reduction, cost of capital</td><td class="coral">Hedge ineffectiveness, basis risk</td></tr>
+        <tr><td><strong>Sovereign Wealth Funds</strong></td><td>Diversified multi-asset long-only</td><td>Intergenerational wealth preservation</td><td class="coral">Political mandate conflicts, illiquidity</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3>Clearing & Settlement Architecture</h3>
+    <p>Every trade has a pre-settlement lifecycle. Execution is the visible part; clearing and settlement are the invisible plumbing that determine whether a trade actually occurs. Failures here are systemic.</p>
+
+    <div class="callout key">
+      <div class="callout-tag">Key Concept</div>
+      <p><strong>Central Counterparty (CCP)</strong>: Upon trade execution, the CCP novates itself between buyer and seller. Each party now has a contract with the CCP — not with each other. This eliminates bilateral counterparty risk but concentrates it at the CCP (too-big-to-fail risk). CCPs are the single most systemically important entities in modern markets. LCH, CME Clearing, ICE Clear, DTCC/NSCC, Eurex Clearing.</p>
+    </div>
+
+    <table class="data-table">
+      <thead><tr><th>Component</th><th>Function</th><th>Key Entity</th><th>Risk Managed</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Exchange</strong></td><td>Price discovery, trade matching, order routing</td><td>NYSE, CME, ICE, Euronext, LSE</td><td class="mono">Operational risk</td></tr>
+        <tr><td><strong>CCP</strong></td><td>Novation, margin collection, default management</td><td>LCH, CME Clearing, DTCC, Eurex</td><td class="mono">Counterparty risk</td></tr>
+        <tr><td><strong>CSD/ICSD</strong></td><td>Securities depository, settlement finality</td><td>DTCC, Euroclear, Clearstream</td><td class="mono">Settlement risk</td></tr>
+        <tr><td><strong>Prime Broker</strong></td><td>Financing, securities lending, custody, clearing for HFs</td><td>GS, MS, JPM, Barclays</td><td class="mono">Credit risk, financing risk</td></tr>
+        <tr><td><strong>Custodian</strong></td><td>Safekeeping of assets, corporate actions, reconciliation</td><td>BNY Mellon, State Street, Citi</td><td class="mono">Operational, safekeeping</td></tr>
+        <tr><td><strong>OMS/EMS</strong></td><td>Order management, execution management, algos</td><td>Charles River, Aladdin, FlexTrade</td><td class="mono">Operational, best execution</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Margin Architecture</h4>
+    <p>Two margin types exist: <span class="term">Initial Margin (IM)</span> — pre-funded against potential future exposure — and <span class="term">Variation Margin (VM)</span> — daily settlement of mark-to-market. CCP margin models (SPAN, VaR-based, ISDA SIMM for bilateral) determine IM requirements using historical simulation or parametric VaR on a 99% confidence, typically 5-day holding period basis. Pro-cyclicality is a known model risk: IM spikes during stress, forcing deleveraging when liquidity is worst.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Prime Brokerage Mechanics</h3>
+    <p>Prime brokers are the life support of the hedge fund ecosystem. They provide: (1) <span class="em">Securities financing</span> — repo and securities lending to create leverage; (2) <span class="em">Custody</span> — assets held in prime's name (rehypothecation risk); (3) <span class="em">Margin</span> — portfolio-level margin using cross-margining and VaR-based systems; (4) <span class="em">Capital introduction</span> — connecting HFs with investors; (5) <span class="em">Operational support</span> — trade confirmation, reconciliation, reporting.</p>
+
+    <div class="callout risk">
+      <div class="callout-tag">Risk Alert</div>
+      <p><strong>Rehypothecation</strong>: Prime brokers can re-use client collateral for their own financing purposes (up to 140% of client debit in the US under Rule 15c3-3; unlimited in the UK). This creates a hidden leverage loop. When a prime broker fails (Lehman 2008), clients' re-hypothecated assets are in the estate — not returned automatically. MF Global 2011 showed the catastrophic version with commingled segregated client funds.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §3 EQUITIES -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="equities">
+  <div class="section-header">
+    <div class="section-tag">§3 — Asset Class</div>
+    <h2>Equity Markets</h2>
+    <p class="section-intro">Equities represent residual claims on corporate cash flows after all other claimants are satisfied. Their value is a function of expected future earnings, discount rates, and the multiple the market assigns to those earnings — each of which is itself a function of complex macro and micro dynamics.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Equity Valuation Frameworks</h3>
+    <h4>Dividend Discount Model (DDM)</h4>
+    <div class="formula-block">
+      <div class="f-title">Gordon Growth Model (constant growth DDM)</div>
+      P₀ = D₁ / (r − g)<br><br>
+      <div class="f-var">
+        where: <span>D₁</span> = expected dividend next period | <span>r</span> = required return on equity | <span>g</span> = perpetual growth rate
+      </div>
+    </div>
+    <p>The DDM is the theoretical foundation but is practically limited: most growth companies pay no dividends, g is unstable, and small errors in (r-g) cause massive valuation swings. It is most applicable to mature, dividend-paying utilities, REITs, and regulated industries.</p>
+
+    <h4>DCF / Free Cash Flow</h4>
+    <div class="formula-block">
+      <div class="f-title">Discounted Free Cash Flow to Equity</div>
+      P₀ = Σ [FCFEₜ / (1+r)ᵗ] + [Terminal Value / (1+r)ⁿ]<br><br>
+      FCFE = Net Income − ΔNet Working Capital − CapEx + Depreciation + Net Borrowing<br><br>
+      Terminal Value = FCFEₙ₊₁ / (r − g)    [Gordon perpetuity]
+      <div class="f-var">
+        Key sensitivities: <span>WACC</span> (discount rate composition) | <span>Terminal growth rate</span> | <span>Forecast horizon length</span>
+      </div>
+    </div>
+
+    <h4>Relative Valuation</h4>
+    <p>In practice, most equity research uses relative valuation — comparing multiples across peers or vs. history. The most commonly used multiples and their institutional interpretation:</p>
+    <table class="data-table">
+      <thead><tr><th>Multiple</th><th>Formula</th><th>What It Captures</th><th>Key Limitation</th></tr></thead>
+      <tbody>
+        <tr><td><strong>P/E</strong></td><td class="mono">Price / EPS</td><td>Earnings-based valuation</td><td>Distorted by leverage, tax, non-recurring items</td></tr>
+        <tr><td><strong>EV/EBITDA</strong></td><td class="mono">Enterprise Value / EBITDA</td><td>Capital-structure-neutral; useful for LBOs</td><td>Ignores capex intensity and working capital</td></tr>
+        <tr><td><strong>EV/EBIT</strong></td><td class="mono">Enterprise Value / EBIT</td><td>Better for capital-intensive industries</td><td>Still ignores debt service timing</td></tr>
+        <tr><td><strong>P/B</strong></td><td class="mono">Price / Book Value</td><td>Relevant for financials, asset-heavy companies</td><td>Book value is historical cost; misses intangibles</td></tr>
+        <tr><td><strong>P/FCF</strong></td><td class="mono">Price / Free Cash Flow</td><td>Cash generation quality</td><td>CapEx cycles create volatility</td></tr>
+        <tr><td><strong>EV/Sales</strong></td><td class="mono">Enterprise Value / Revenue</td><td>Pre-profitability growth companies</td><td>Ignores all cost structure; highly rate-sensitive</td></tr>
+        <tr><td><strong>PEG</strong></td><td class="mono">P/E / Growth Rate</td><td>Growth-adjusted valuation</td><td>Growth estimates are subjective; PEG ≠ 1 rule is arbitrary</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout inst">
+      <div class="callout-tag">Institutional Note</div>
+      <p><strong>Multiple expansion vs. earnings growth</strong>: Equity returns decompose into: (1) earnings growth, (2) dividend yield, and (3) multiple change (P/E expansion or compression). During 2010-2021, a significant portion of US equity returns came from multiple expansion driven by falling discount rates. As rates rise, multiple compression becomes the dominant headwind even if EPS grows. This is the central tension in 2023-2025 equity positioning.</p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3>Short Selling Mechanics</h3>
+    <p>Short selling is the sale of borrowed securities. The mechanism: (1) Locate shares from a securities lender (custodian bank, long-only fund). (2) Borrow against collateral (cash or bonds) posted to the lender. (3) Sell the shares in the market. (4) Cover by buying back at a later date. (5) Return shares to lender.</p>
+
+    <div class="formula-block">
+      <div class="f-title">Short Selling P&L</div>
+      P&L = (Sale Price − Cover Price) × Shares − Borrow Cost − Dividend Obligations<br><br>
+      Borrow Cost (annualized) = Borrow Rate × Days Held / 360<br><br>
+      <div class="f-var">
+        <span>Borrow Rate</span> ranges from 25bps (GC/easy-to-borrow) to 20%+ (specials/HTB stocks)
+      </div>
+    </div>
+
+    <div class="callout risk">
+      <div class="callout-tag">Risk: Short Squeeze</div>
+      <p>A short squeeze occurs when: (1) a heavily shorted stock rises, (2) short sellers face margin calls, (3) forced covering amplifies the move, (4) lenders recall shares (buy-in risk), creating a feedback loop. Short interest as % of float, days-to-cover (short interest ÷ ADV), and borrow availability are the key metrics. GME January 2021 was the canonical modern short squeeze — short interest exceeded 100% of float (via rehypothecation), with days-to-cover of 30+.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §4 MICROSTRUCTURE -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="microstructure">
+  <div class="section-header">
+    <div class="section-tag">§4 — Market Structure</div>
+    <h2>Market Microstructure</h2>
+    <p class="section-intro">Microstructure is the study of how trades actually happen — the mechanics of price discovery, order flow, spread formation, adverse selection, and the strategic behavior of market participants around a trade. This determines real execution costs, which in any high-frequency or large-scale strategy dominate all other considerations.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Order Types & Execution Mechanics</h3>
+    <table class="data-table">
+      <thead><tr><th>Order Type</th><th>Execution Logic</th><th>When to Use</th><th>Risk</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Market Order</strong></td><td>Immediate execution at best available price</td><td>When certainty of fill > price</td><td class="coral">Slippage in illiquid markets; walks the book</td></tr>
+        <tr><td><strong>Limit Order</strong></td><td>Execute only at specified price or better</td><td>Passive liquidity provision; precise entry</td><td class="coral">Execution risk; adverse selection if filled</td></tr>
+        <tr><td><strong>Stop Order</strong></td><td>Triggered as market order when price hits level</td><td>Loss-cutting; momentum entry</td><td class="coral">Slippage through the stop; gaps overnight</td></tr>
+        <tr><td><strong>Stop-Limit</strong></td><td>Triggered as limit order when stop hits</td><td>Prevents excessive slippage vs. pure stop</td><td class="coral">May not fill if market gaps through limit</td></tr>
+        <tr><td><strong>TWAP</strong></td><td>Splits order evenly over time window</td><td>Large orders; minimize time-weighted impact</td><td class="coral">Predictable; front-runnable by HFT</td></tr>
+        <tr><td><strong>VWAP</strong></td><td>Trades in proportion to market volume profile</td><td>Benchmark to daily average; institutional default</td><td class="coral">Chases volume spikes; underperforms in trending markets</td></tr>
+        <tr><td><strong>IS (Implementation Shortfall)</strong></td><td>Minimizes difference between decision price and realized price</td><td>Alpha-sensitive strategies; cost-conscious</td><td class="coral">Complex parameter sensitivity; model-dependent</td></tr>
+        <tr><td><strong>Iceberg</strong></td><td>Shows only portion of order; refreshes as executed</td><td>Large size; avoid information leakage</td><td class="coral">HFT detect iceberg patterns via quote stuffing detection</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3>Spread Decomposition</h3>
+    <p>The bid-ask spread is not random — it decomposes into three economically distinct components, each managed differently by market makers:</p>
+
+    <div class="formula-block">
+      <div class="f-title">Glosten-Milgrom Spread Decomposition</div>
+      Spread = Adverse Selection Component + Inventory Cost + Order Processing Cost<br><br>
+      Adverse Selection = 2 × α × (V − P)<br>
+      where α = probability counterparty is informed, V = true value, P = current price<br><br>
+      <div class="f-var">
+        Market makers quote wide spreads when: <span>α is high</span> (earnings, news imminent) | <span>inventory is extreme</span> | <span>volatility spikes</span>
+      </div>
+    </div>
+
+    <p><span class="em">Adverse selection</span> is the core problem of market making: informed traders know more than the market maker and always trade against the maker's interest. The maker recovers this loss by charging uninformed traders (hedgers, noise traders) via the spread. HFT with faster data feeds can identify informed flow earlier, forcing traditional market makers to widen spreads further.</p>
+
+    <h4>Transaction Cost Analysis (TCA)</h4>
+    <div class="formula-block">
+      <div class="f-title">Implementation Shortfall</div>
+      IS = (Realized Price − Decision Price) / Decision Price × Position Size<br><br>
+      IS decomposes into:<br>
+      ├── Delay Cost: decision-to-first-trade price move<br>
+      ├── Market Impact: price move caused by own trading<br>
+      ├── Timing Risk: price volatility during execution<br>
+      └── Opportunity Cost: unexecuted portion × price move
+    </div>
+
+    <div class="callout inst">
+      <div class="callout-tag">Institutional Reality</div>
+      <p><strong>Market impact models</strong>: Almgren-Chriss (2000) remains the canonical framework. Market impact is roughly: MI ≈ σ × (Q/V)^0.5 × f(speed), where σ is volatility, Q is order size, V is average daily volume, and f(speed) is an increasing function of trading urgency. Temporary impact decays; permanent impact (the information component) does not. For large institutional orders (>5% of ADV), impact dominates all other costs. The optimal trade schedule balances impact (lower with slow trading) against timing risk (lower with fast trading).</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §5 ETFs -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="etfs">
+  <div class="section-header">
+    <div class="section-tag">§5 — Equity Products</div>
+    <h2>ETFs & Index Products</h2>
+    <p class="section-intro">ETFs are the most consequential financial innovation of the last 30 years by market structure impact. They combine the diversification of mutual funds with intraday tradability — and introduce a complex creation/redemption arbitrage mechanism that links ETF prices to their NAV in a non-trivial way.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>The Creation/Redemption Mechanism</h3>
+    <p>The ETF premium/discount to NAV is kept tight (typically 1-5bps in liquid equity ETFs) by <span class="em">Authorized Participants (APs)</span> — typically large broker-dealers — who can create or redeem ETF shares in kind against the underlying basket.</p>
+    <div class="flow">
+      <div class="flow-node">AP assembles basket of underlying stocks</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node gold">Delivers to ETF sponsor in exchange for new ETF shares</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">AP sells ETF shares in secondary market at premium</div>
+    </div>
+    <p>Redemption works in reverse: AP buys ETF shares (at a discount to NAV), delivers to sponsor, receives the basket. This mechanism creates a powerful arbitrage that eliminates persistent premiums/discounts — <em>unless</em> the underlying basket is illiquid, crosses multiple time zones, or involves restrictions on short-selling.</p>
+
+    <div class="callout risk">
+      <div class="callout-tag">Risk: ETF Stress Scenarios</div>
+      <p><strong>Fixed income ETF breakdown</strong>: During March 2020, investment-grade bond ETFs (LQD, VCIT) traded at discounts of 3-5% to NAV for several days. The underlying corporate bonds were illiquid (2-3 market makers, wide bid-ask spreads, limited institutional supply). APs could not construct redemption baskets efficiently. The ETF became the price-discovery vehicle for the underlying market — a structural reversal of the normal relationship. This created opportunities for sophisticated traders but highlighted the NAV-price gap risk during dislocations.</p>
+    </div>
+
+    <h4>Synthetic ETFs</h4>
+    <p>Synthetic ETFs (common in Europe) do not hold the underlying basket. Instead, they hold a substitute basket (often unrelated assets) as collateral and enter into a total return swap with a dealer who delivers the index return. This introduces: (1) counterparty risk to the swap dealer, (2) collateral quality risk, (3) securities lending income sharing complexity. UCITS rules cap unfunded swap exposure at 10% of NAV, providing some protection.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Index Construction & Rebalancing Mechanics</h3>
+    <p>Index rebalancing creates predictable, front-runnable order flow. When a stock is added to the S&P 500, passive funds holding ~$7 trillion of S&P 500 products must buy the stock simultaneously. Academic research (Greenwood 2008, Kaul et al.) documents 3-7% price increases at announcement with partial reversal — a pure mechanical flow effect unrelated to fundamentals.</p>
+
+    <div class="callout inst">
+      <div class="callout-tag">Strategy Note</div>
+      <p><strong>Index arbitrage and gamma effects</strong>: The S&P 500 reconstitution trade is one of the longest-running systematic strategies. Add candidates identified via index methodology rules (market cap, liquidity, profitability screens) can be bought on announcement date (typically 1-3 weeks before effective date) and sold on or just before the effective date when passive flow peaks. Execution timing relative to the official close of the effective date is critical — passive funds replicate exactly at the closing auction.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §6 BONDS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="bonds">
+  <div class="section-header">
+    <div class="section-tag">§6 — Fixed Income</div>
+    <h2>Bond Mechanics & Pricing</h2>
+    <p class="section-intro">A bond is a contractual obligation to pay specified cash flows at specified times. The apparent simplicity hides enormous complexity in how bonds are priced, how their risk is measured, and how they interact with credit, rates, and liquidity dimensions.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Bond Price / Yield Relationship</h3>
+    <div class="formula-block">
+      <div class="f-title">Bond Pricing — Full Price (Dirty Price)</div>
+      P = Σ [C / (1+y/m)^(t×m)] + [FV / (1+y/m)^(n×m)]<br><br>
+      where t = 1 to n (periods), C = coupon payment, y = yield to maturity, m = coupons/year, FV = face value<br><br>
+      Clean Price = Dirty Price − Accrued Interest<br>
+      Accrued Interest = C × (Days since last coupon / Days in coupon period)
+      <div class="f-var">
+        <span>Yield to Maturity</span> is the single discount rate that equates PV of all cash flows to market price — it is an internal rate of return assumption, not a forward rate forecast
+      </div>
+    </div>
+
+    <p>Bond price and yield move inversely. This is not merely a mathematical relationship — it is the central tension in fixed income portfolio management. A long bond portfolio is short duration: any rise in rates creates mark-to-market losses. The magnitude of these losses is captured by duration and convexity.</p>
+
+    <h4>Duration</h4>
+    <div class="formula-block">
+      <div class="f-title">Macaulay Duration, Modified Duration, DV01</div>
+      Macaulay Duration = Σ [t × PV(CFₜ)] / P<br>  (cash-flow-weighted average time to receipt)<br><br>
+      Modified Duration = Macaulay Duration / (1 + y/m)<br><br>
+      ΔP/P ≈ −ModDur × Δy    (first-order approximation)<br><br>
+      DV01 = −(ΔP / Δy) = ModDur × P × 0.0001<br>
+      DV01 is price change per 1 basis point (0.01%) move in yield
+      <div class="f-var">
+        A 10-year Treasury with <span>ModDur = 9.0</span> loses ~9% in price for a 100bps rise in yield
+      </div>
+    </div>
+
+    <h4>Convexity</h4>
+    <div class="formula-block">
+      <div class="f-title">Second-Order Price Approximation with Convexity</div>
+      ΔP/P ≈ −ModDur × Δy + ½ × Convexity × (Δy)²<br><br>
+      Convexity = [1 / (P × (1+y)²)] × Σ [t(t+1) × CFₜ / (1+y)ᵗ]
+      <div class="f-var">
+        <span>Positive convexity</span>: price rises more than duration predicts when yields fall; falls less when yields rise → always good for longs<br>
+        <span>Negative convexity</span>: callable bonds, mortgage-backed securities — duration extends when rates rise (prepayments slow), shortens when rates fall (prepayments accelerate)
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3>Bond Types & Their Unique Risks</h3>
+    <table class="data-table">
+      <thead><tr><th>Bond Type</th><th>Structure</th><th>Unique Risk</th><th>Key Investor</th></tr></thead>
+      <tbody>
+        <tr><td><strong>On-the-Run Treasury</strong></td><td>Most recently issued benchmark; highest liquidity</td><td>Cheapest-to-Deliver dynamics in futures</td><td class="mono">Dealers, HFs, central banks</td></tr>
+        <tr><td><strong>Off-the-Run Treasury</strong></td><td>Older issue; slightly less liquid; trades at yield premium</td><td>Liquidity premium can spike in stress</td><td class="mono">Buy-and-hold; LTCM-style arb</td></tr>
+        <tr><td><strong>TIPS (Inflation-Linked)</strong></td><td>Principal adjusts with CPI; real yield coupon</td><td>Deflation floor, liquidity premium in stress</td><td class="mono">Pension funds, real money</td></tr>
+        <tr><td><strong>Callable Corporate</strong></td><td>Issuer has option to redeem early</td><td>Negative convexity; OAS required for pricing</td><td class="mono">Insurance, income funds</td></tr>
+        <tr><td><strong>Convertible</strong></td><td>Bond + embedded equity call option</td><td>Delta changes with stock; gamma exposure</td><td class="mono">Convertible arb funds</td></tr>
+        <tr><td><strong>AT1 / CoCo</strong></td><td>Perpetual; writes down or converts at capital trigger</td><td>Extension risk, write-down risk (CS March 2023)</td><td class="mono">HY-oriented credit funds</td></tr>
+        <tr><td><strong>MBS / ABS</strong></td><td>Pool of mortgages/loans; cash flows tranched</td><td>Prepayment risk, extension risk, model risk</td><td class="mono">Agencies (Fannie/Freddie), banks</td></tr>
+        <tr><td><strong>CLO Tranche</strong></td><td>Pool of leveraged loans; tranched by seniority</td><td>Correlation risk, reinvestment risk, manager risk</td><td class="mono">Banks, insurance, HFs (equity tranche)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §7 RATES & YIELD CURVES -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="rates">
+  <div class="section-header">
+    <div class="section-tag">§7 — Fixed Income</div>
+    <h2>Rates & Yield Curves</h2>
+    <p class="section-intro">The yield curve is simultaneously a monetary policy signal, a macro forecast, a credit benchmark, a valuation tool, and a trading opportunity. Understanding all of its dimensions — shape, level, curvature, richness/cheapness — is foundational to fixed income, derivatives, equity, and FX positioning.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Yield Curve Theories</h3>
+    <div class="compare-row">
+      <div class="compare-col">
+        <h4>Pure Expectations</h4>
+        <ul>
+          <li>Long rates = average of expected future short rates</li>
+          <li>No term premium</li>
+          <li>Implication: upward slope → rising rate expectations</li>
+          <li>Fails empirically: term premium exists</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <h4>Liquidity Preference</h4>
+        <ul>
+          <li>Long rates = expected short rates + liquidity premium</li>
+          <li>Premium rises with maturity (investors demand compensation for duration risk)</li>
+          <li>Explains why curve is typically upward-sloping even in flat rate environments</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <h4>Market Segmentation</h4>
+        <ul>
+          <li>Different investors have preferred habitats (pension funds → long end)</li>
+          <li>Supply/demand in each maturity segment independently drives rates</li>
+          <li>Explains why QE (buying long end) flattens the curve regardless of short rate expectations</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Curve Shapes & Their Macro Interpretation</h4>
+    <table class="data-table">
+      <thead><tr><th>Shape</th><th>Definition</th><th>Typical Macro Context</th><th>Implication for Strategy</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Normal (Steep)</strong></td><td>Long > short rates; positive slope</td><td>Early recovery; accommodative policy; inflation expected to rise</td><td class="green">Positive carry on duration; curve steepeners</td></tr>
+        <tr><td><strong>Flat</strong></td><td>Long ≈ short rates; 2s10s near zero</td><td>Late cycle; Fed nearing terminal rate; uncertainty</td><td class="gold">Minimal carry; neutral duration; watch for inversion</td></tr>
+        <tr><td><strong>Inverted</strong></td><td>Short > long rates; negative 2s10s</td><td>Tight monetary policy; recession risk elevated; risk aversion</td><td class="coral">Negative carry on duration; historically precedes recession by 12-18 months</td></tr>
+        <tr><td><strong>Humped</strong></td><td>Medium-term rates highest (belly richness)</td><td>Transition periods; mixed signals on policy path</td><td class="gold">Barbell vs. bullet trades; fly structures</td></tr>
+        <tr><td><strong>Bear Steepening</strong></td><td>Long rates rise faster than short</td><td>Inflation fears; term premium expansion; fiscal deterioration</td><td class="coral">Dangerous for long duration positions; short 30Y</td></tr>
+        <tr><td><strong>Bull Flattening</strong></td><td>Long rates fall faster than short</td><td>Risk-off flight to quality; recession fears</td><td class="green">Long duration outperforms; curve flatteners</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Key Rate Duration (KRD)</h4>
+    <p>Rather than summarizing interest rate risk as a single duration number, KRD measures sensitivity to changes at each maturity bucket (2Y, 5Y, 10Y, 30Y etc.) independently. This allows precise hedging of non-parallel curve moves. A portfolio with 50% of KRD at the 30Y point behaves very differently from one concentrated at 2Y — even if modified duration is identical.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Rate Benchmarks: LIBOR Transition</h3>
+    <p>The LIBOR scandal (2012) and subsequent replacement with risk-free rates (RFRs) represents the largest structural change in rates markets in decades. LIBOR was a <span class="em">term rate</span> with a credit component (it reflected interbank borrowing costs). Its replacements are <span class="em">overnight rates</span> based on actual transactions — no credit component, no term premium.</p>
+
+    <table class="data-table">
+      <thead><tr><th>Currency</th><th>Old Rate</th><th>New RFR</th><th>Convention</th></tr></thead>
+      <tbody>
+        <tr><td>USD</td><td class="coral">LIBOR (ceased June 2023)</td><td class="green">SOFR (Secured Overnight Financing Rate)</td><td class="mono">Repo-based; secured</td></tr>
+        <tr><td>GBP</td><td class="coral">GBP LIBOR</td><td class="green">SONIA (Sterling Overnight Index Average)</td><td class="mono">Unsecured</td></tr>
+        <tr><td>EUR</td><td class="coral">EURIBOR (still exists)</td><td class="green">€STR (Euro Short-Term Rate)</td><td class="mono">Unsecured; ECB-published</td></tr>
+        <tr><td>JPY</td><td class="coral">JPY LIBOR</td><td class="green">TONA (Tokyo Overnight Average Rate)</td><td class="mono">Unsecured</td></tr>
+        <tr><td>CHF</td><td class="coral">CHF LIBOR</td><td class="green">SARON (Swiss Average Rate Overnight)</td><td class="mono">Repo-based</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout risk">
+      <div class="callout-tag">Basis Risk</div>
+      <p><strong>SOFR vs. LIBOR basis</strong>: Legacy contracts (loans, bonds, swaps) that referenced LIBOR were either renegotiated or converted via fallback language (ISDA protocol). The SOFR-LIBOR spread adjustment was fixed at the 5-year historical median spread at the time of LIBOR cessation. For USD 3M LIBOR, this was approximately 26bps. Instruments that transitioned at different times or with different spread adjustments create residual basis exposures that persist in portfolios for years.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §8 CREDIT -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="credit">
+  <div class="section-header">
+    <div class="section-tag">§8 — Fixed Income</div>
+    <h2>Credit Markets & Spread Products</h2>
+    <p class="section-intro">Credit investing is the business of lending money at a spread over risk-free rates, and being compensated for the risk that the borrower defaults. The spread must cover expected default losses, the uncertainty around them, and an illiquidity premium. Getting this decomposition right is the entirety of credit analysis.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Spread Measures</h3>
+    <div class="formula-block">
+      <div class="f-title">Credit Spread Measures — From Simple to Sophisticated</div>
+      Nominal Spread = YTM(bond) − YTM(benchmark Treasury of similar maturity)<br>
+      [Ignores curve shape; crude but fast]<br><br>
+      Z-Spread (Zero-Volatility Spread) = constant spread added to each point of the risk-free zero curve<br>
+      P = Σ [CFₜ / (1 + zₜ + Z)ᵗ]    where zₜ = risk-free zero rate at time t<br>
+      [Accounts for curve shape; assumes no embedded options]<br><br>
+      OAS (Option-Adjusted Spread) = Z-Spread − Option Cost<br>
+      [For callable bonds/MBS: strips out the option value before measuring credit premium]<br>
+      Estimated via Monte Carlo across interest rate paths<br><br>
+      ASW (Asset Swap Spread) = bond yield − IBOR/SOFR swap rate<br>
+      [Used in the swap market; measures bond richness vs. swaps]
+    </div>
+
+    <h4>Credit Rating & Default Statistics</h4>
+    <table class="data-table">
+      <thead><tr><th>Rating</th><th>Category</th><th>1Y Default Rate (historical avg)</th><th>5Y Cumulative Default</th></tr></thead>
+      <tbody>
+        <tr><td><strong>AAA</strong></td><td>Investment Grade</td><td class="green">0.00%</td><td class="green">0.10%</td></tr>
+        <tr><td><strong>AA</strong></td><td>Investment Grade</td><td class="green">0.02%</td><td class="green">0.28%</td></tr>
+        <tr><td><strong>A</strong></td><td>Investment Grade</td><td class="green">0.06%</td><td class="green">0.68%</td></tr>
+        <tr><td><strong>BBB</strong></td><td>Investment Grade</td><td class="gold">0.18%</td><td class="gold">2.17%</td></tr>
+        <tr><td><strong>BB</strong></td><td>High Yield / Speculative</td><td class="gold">0.82%</td><td class="gold">7.92%</td></tr>
+        <tr><td><strong>B</strong></td><td>High Yield</td><td class="coral">3.26%</td><td class="coral">19.5%</td></tr>
+        <tr><td><strong>CCC/C</strong></td><td>Distressed / Near-Default</td><td class="coral">14.0%</td><td class="coral">42.7%</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout key">
+      <div class="callout-tag">Key Concept — Recovery Rate</div>
+      <p>Default alone does not define loss. Expected Loss = PD × (1 − Recovery Rate). Recovery rates for senior secured debt average 60-70%, senior unsecured 40-50%, subordinated 20-30%, equity near zero in bankruptcy. Recoveries vary enormously by industry: capital-intensive sectors (utilities, airlines) have tangible assets; software/financials may recover very little. The recovery rate is a key input to CDS pricing and CLO modeling.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §9 REPO -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="repo">
+  <div class="section-header">
+    <div class="section-tag">§9 — Money Markets</div>
+    <h2>Repo & Money Markets</h2>
+    <p class="section-intro">The repo market is the circulatory system of the financial system. It is where banks, dealers, hedge funds, and central banks finance their securities holdings on a short-term (overnight to 3-month) basis. Without repo, modern leveraged finance does not function.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Repo Mechanics</h3>
+    <p>A repurchase agreement (repo) is economically equivalent to a collateralized loan. The <span class="em">seller/borrower</span> sells securities to the <span class="em">buyer/lender</span> with an agreement to repurchase them at a higher price (the difference reflects interest). The buyer holds collateral as protection against default.</p>
+
+    <div class="formula-block">
+      <div class="f-title">Repo Mechanics</div>
+      Cash Received = Market Value of Collateral × (1 − Haircut)<br><br>
+      Repurchase Price = Cash Lent × (1 + Repo Rate × Days/360)<br><br>
+      Implied Repo Rate = [(Repurchase Price/Purchase Price) − 1] × (360/Days)<br><br>
+      <div class="f-var">
+        <span>Haircut</span> = over-collateralization. On-the-run Treasuries: 0-2%. IG corporate bonds: 5-10%. HY bonds: 15-25%. Equities: 10-20%. The haircut absorbs potential value decline during close-out.
+      </div>
+    </div>
+
+    <h4>General Collateral (GC) vs. Specials</h4>
+    <p>Most repo uses <span class="term">GC collateral</span> — any acceptable security from a broad pool. The <span class="term">GC repo rate</span> tracks closely to central bank policy rates. Specific securities in high demand (e.g., on-the-run Treasury being squeezed in the futures delivery mechanism) trade in repo at a rate significantly below GC — these are called <span class="em">specials</span>. When a security trades very special (repo rate near zero or even negative), it signals acute short interest or forced covering.</p>
+
+    <div class="callout risk">
+      <div class="callout-tag">Systemic Risk</div>
+      <p><strong>Repo runs</strong>: The 2008 financial crisis was fundamentally a repo run. When Lehman Brothers' solvency was questioned, repo counterparties refused to roll their overnight repos, requiring Lehman to sell assets into an illiquid market. Gorton and Metrick (2012) document "haircut spirals" — as collateral values fell, lenders demanded higher haircuts, forcing more asset sales, further depressing prices. The tri-party repo market (JPM and BNY Mellon as clearing banks) saw $2.8 trillion of intraday credit evaporate in hours. SOFR was designed to measure and anchor this market.</p>
+    </div>
+
+    <h4>Reverse Repo & Fed Operations</h4>
+    <p>The Federal Reserve's Overnight Reverse Repo (ON RRP) facility allows eligible counterparties (money market funds, primary dealers, GSEs) to deposit cash with the Fed overnight in exchange for Treasuries. This sets a floor on money market rates. During 2022-2023, ON RRP balances exceeded $2.5 trillion — a sign of excess reserves and the Fed's QT program working to mop up surplus liquidity.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §10 FUTURES & FORWARDS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="futures">
+  <div class="section-header">
+    <div class="section-tag">§10 — Derivatives</div>
+    <h2>Futures & Forwards</h2>
+    <p class="section-intro">Futures and forwards are agreements to transact at a predetermined price at a future date. They differ in standardization, venue, and settlement — but share the same fundamental pricing logic anchored to spot price plus cost of carry.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Cost of Carry Pricing</h3>
+    <div class="formula-block">
+      <div class="f-title">Forward/Futures Pricing — Cost of Carry Model</div>
+      F = S × e^(r−q)T    [continuous compounding]<br>
+      F = S × (1 + r − q)^T  [discrete compounding]<br><br>
+      For commodities with storage costs (u) and convenience yield (y):<br>
+      F = S × e^(r + u − y)T<br><br>
+      <div class="f-var">
+        <span>S</span> = spot price | <span>r</span> = risk-free rate | <span>q</span> = dividend/income yield | <span>T</span> = time to expiry (years)<br>
+        <span>u</span> = storage cost rate | <span>y</span> = convenience yield (benefit of holding physical commodity)
+      </div>
+    </div>
+
+    <h4>The Basis</h4>
+    <p>Basis = Spot − Futures (or Futures − Spot depending on convention). In a normal world, basis converges to zero at expiry. Deviations from theoretical forward prices create <span class="term">basis</span> that can be arbitraged — but not costlessly. Real-world frictions (financing costs, borrow costs, transaction costs, balance sheet constraints) mean basis can persist and even widen.</p>
+
+    <h4>Key Futures Contracts</h4>
+    <table class="data-table">
+      <thead><tr><th>Contract</th><th>Exchange</th><th>Underlying</th><th>Key Nuance</th></tr></thead>
+      <tbody>
+        <tr><td><strong>E-mini S&P 500 (ES)</strong></td><td>CME</td><td>S&P 500 Index</td><td>Largest equity futures by notional; $50 × index. Cash settled. Quarterly roll.</td></tr>
+        <tr><td><strong>10Y Treasury (ZN)</strong></td><td>CME/CBOT</td><td>Notional 6% coupon bond</td><td>Physical delivery of CTD bond; CTD switches create complex roll dynamics</td></tr>
+        <tr><td><strong>Eurodollar (GE) / SOFR</strong></td><td>CME</td><td>3M deposit rate expectations</td><td>Strip of contracts = complete rate path; GE → SOFR transition complete</td></tr>
+        <tr><td><strong>WTI Crude (CL)</strong></td><td>NYMEX</td><td>Light sweet crude at Cushing, OK</td><td>Physical delivery at Cushing; negative prices April 2020 (storage exhausted)</td></tr>
+        <tr><td><strong>EUR/USD (6E)</strong></td><td>CME</td><td>Euro vs US Dollar</td><td>Exchange-traded FX futures; smaller than OTC forward market</td></tr>
+        <tr><td><strong>VIX Futures (VX)</strong></td><td>CBOE</td><td>Expected 30-day S&P 500 vol</td><td>Non-replicable underlying; term structure usually in contango → drag for long VIX ETFs</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Futures vs. Forwards — Critical Differences</h4>
+    <div class="compare-row">
+      <div class="compare-col">
+        <h4>Exchange-Traded Futures</h4>
+        <ul>
+          <li>Standardized size, expiry, settlement</li>
+          <li>Daily mark-to-market with margin calls</li>
+          <li>Central clearing via CCP</li>
+          <li>High liquidity; transparent pricing</li>
+          <li>Convexity adjustment vs forwards (for rate futures)</li>
+          <li>Roll required at expiry</li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <h4>OTC Forwards</h4>
+        <ul>
+          <li>Bespoke terms, size, settlement date</li>
+          <li>No daily MTM — settlement at maturity</li>
+          <li>Bilateral counterparty risk (or cleared)</li>
+          <li>Used for precise hedging (e.g., FX)</li>
+          <li>No convexity adjustment</li>
+          <li>No roll required</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout formula">
+      <div class="callout-tag">Convexity Adjustment (Futures vs. Forwards)</div>
+      <p>Interest rate futures (Eurodollar/SOFR) are not equivalent to FRAs (forward rate agreements) of the same maturity. Because futures are marked to market daily, the daily P&L correlation with rates creates a <strong>convexity bias</strong>. Forward Rate = Futures Rate − ½ × σ² × T₁ × T₂ where σ is rate volatility, T₁ is time to futures expiry, T₂ is time to end of reference period. This adjustment grows with maturity — for a 5-year SOFR futures strip, the convexity adjustment can be 15-30bps at the far end.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §11 OPTIONS THEORY -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="options">
+  <div class="section-header">
+    <div class="section-tag">§11 — Derivatives</div>
+    <h2>Options Theory</h2>
+    <p class="section-intro">Options are contracts that grant the right, not the obligation, to buy or sell an underlying asset at a specific price on or before a specific date. They are nonlinear instruments — their value is a function of price, volatility, time, and rates — and this nonlinearity is simultaneously what makes them powerful hedging tools and complex risk management challenges.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Black-Scholes-Merton Framework</h3>
+    <div class="formula-block">
+      <div class="f-title">Black-Scholes Option Pricing</div>
+      Call: C = S × e^(−qT) × N(d₁) − K × e^(−rT) × N(d₂)<br>
+      Put:  P = K × e^(−rT) × N(−d₂) − S × e^(−qT) × N(−d₁)<br><br>
+      d₁ = [ln(S/K) + (r − q + σ²/2) × T] / (σ√T)<br>
+      d₂ = d₁ − σ√T<br><br>
+      Put-Call Parity: C − P = S × e^(−qT) − K × e^(−rT)
+      <div class="f-var">
+        <span>S</span> = spot | <span>K</span> = strike | <span>r</span> = risk-free rate | <span>q</span> = dividend yield | <span>σ</span> = implied volatility | <span>T</span> = time to expiry | <span>N(·)</span> = standard normal CDF
+      </div>
+    </div>
+
+    <h4>BSM Assumptions & Their Violations</h4>
+    <table class="data-table">
+      <thead><tr><th>BSM Assumption</th><th>Reality</th><th>Practical Impact</th></tr></thead>
+      <tbody>
+        <tr><td>Constant volatility</td><td>Volatility is stochastic; has a smile/skew</td><td>BSM misprices OTM options; need vol surface models (Heston, SABR)</td></tr>
+        <tr><td>Log-normal returns</td><td>Returns exhibit fat tails, negative skew</td><td>BSM underprices OTM puts, tail protection → skew premium</td></tr>
+        <tr><td>Continuous trading, no jumps</td><td>Gaps, discrete events, earnings</td><td>BSM underprices near-term gamma around events</td></tr>
+        <tr><td>Constant interest rates</td><td>Rates vary; correlated with equity</td><td>Long-dated equity options sensitive to rate/dividend changes</td></tr>
+        <tr><td>No transaction costs</td><td>Bid-ask spreads, market impact</td><td>Delta hedging is expensive; continuous hedging is impossible</td></tr>
+        <tr><td>Perfect liquidity</td><td>Deep OTM, long-dated options illiquid</td><td>Model price ≠ tradeable price; liquidity premium embedded in quotes</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Implied Volatility vs. Realized Volatility</h4>
+    <div class="formula-block">
+      <div class="f-title">Realized vs. Implied Vol — The Variance Risk Premium</div>
+      Realized Vol (Historical) = σ_R = √(252 × mean[(rₜ − r̄)²]) over lookback window<br><br>
+      Implied Vol = σ_IV extracted from market option price via BSM inversion<br><br>
+      Variance Risk Premium (VRP) = E[σ_IV²] − E[σ_R²] > 0 (empirically)<br>
+      Selling volatility (short straddles, short variance swaps) captures this premium<br>
+      <div class="f-var">
+        VIX (the "fear index") is a model-free measure of <span>30-day implied variance</span> on S&P 500 options.<br>
+        Historically: VIX averages 19-20; realized S&P 500 vol averages 15-16 → persistent VRP of ~4 vol points
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §12 THE GREEKS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="greeks">
+  <div class="section-header">
+    <div class="section-tag">§12 — Derivatives Risk</div>
+    <h2>The Greeks</h2>
+    <p class="section-intro">The Greeks quantify an option's sensitivity to each of its key inputs. A practitioner who cannot read a Greeks P&L attribution cannot manage an options book. These are not theoretical abstractions — they drive daily hedging decisions, risk limits, and P&L explanation.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>First-Order Greeks</h3>
+    <table class="data-table">
+      <thead><tr><th>Greek</th><th>Definition</th><th>Formula (Call)</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Delta (Δ)</strong></td><td>∂V/∂S — price sensitivity to underlying</td><td class="mono">N(d₁)</td><td>ATM call ≈ 0.50; deep ITM ≈ 1.0; deep OTM ≈ 0. Hedge ratio: own Δ shares of underlying per long call</td></tr>
+        <tr><td><strong>Gamma (Γ)</strong></td><td>∂²V/∂S² — rate of change of delta</td><td class="mono">N'(d₁) / (S×σ√T)</td><td>Peaks at ATM, near expiry. Long gamma = profitable in high realized vol. Short gamma = daily bleed if markets move</td></tr>
+        <tr><td><strong>Theta (Θ)</strong></td><td>∂V/∂t — time decay per day</td><td class="mono">−[S×σ×N'(d₁)] / [2√T] − rK×e^(−rT)×N(d₂)</td><td>Long options lose value daily (negative theta). Short options collect theta. Gamma and theta are in direct tension</td></tr>
+        <tr><td><strong>Vega (ν)</strong></td><td>∂V/∂σ — sensitivity to implied vol (per 1%)</td><td class="mono">S×e^(−qT)×N'(d₁)×√T</td><td>Long options have positive vega; higher IV = more valuable. Vega peaks ATM and grows with time to expiry</td></tr>
+        <tr><td><strong>Rho (ρ)</strong></td><td>∂V/∂r — sensitivity to risk-free rate (per 1%)</td><td class="mono">K×T×e^(−rT)×N(d₂)</td><td>Small for short-dated options; material for long-dated (LEAPS). Rate rises boost call value (higher cost of carry)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Second-Order Greeks (Cross-Greeks)</h3>
+    <table class="data-table">
+      <thead><tr><th>Greek</th><th>Sensitivity</th><th>Practical Use</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Vanna</strong></td><td>∂Δ/∂σ = ∂ν/∂S — delta's sensitivity to vol</td><td>When vol spikes and market sells off simultaneously, OTM puts gain extra delta → amplifies P&L. Key in stress events</td></tr>
+        <tr><td><strong>Volga / Vomma</strong></td><td>∂ν/∂σ = ∂²V/∂σ² — vega's sensitivity to vol</td><td>Long OTM options have positive volga → benefit from vol-of-vol expansion. At heart of variance swap premium</td></tr>
+        <tr><td><strong>Charm</strong></td><td>∂Δ/∂t = ∂Θ/∂S — delta decay over time</td><td>ITM options' delta changes as expiry approaches. Critical for delta hedging near expiry (pin risk)</td></tr>
+        <tr><td><strong>Speed</strong></td><td>∂Γ/∂S — rate of change of gamma</td><td>Measures how quickly the hedge ratio changes. Deep OTM options have high speed near their strike</td></tr>
+        <tr><td><strong>Color</strong></td><td>∂Γ/∂t — gamma decay</td><td>How gamma changes as time passes. Near expiry, gamma concentrates around ATM and rapidly decays elsewhere</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout key">
+      <div class="callout-tag">Gamma-Theta Tradeoff — The Core Option P&L Equation</div>
+      <p>For a delta-hedged option position, the daily P&L is approximately:<br><br>
+      Daily P&L ≈ ½ × Γ × (ΔS)² − Θ × Δt<br><br>
+      This is the fundamental tradeoff: you pay theta daily for the right to benefit when the underlying moves by more than expected. If realized volatility exceeds implied volatility, long gamma wins. If realized vol is below implied, short gamma (theta collecting) wins. The entire options market is a continuous auction for this bet.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §13 VOLATILITY SURFACE -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="volsurface">
+  <div class="section-header">
+    <div class="section-tag">§13 — Derivatives</div>
+    <h2>The Volatility Surface</h2>
+    <p class="section-intro">In BSM, a single volatility parameter generates option prices. In reality, options of different strikes and maturities imply different volatilities when BSM is inverted. This map of implied vol across strike and maturity is the volatility surface — a three-dimensional representation of market pricing that captures distributional assumptions, supply/demand dynamics, and hedging costs.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Skew & Smile</h3>
+    <p><span class="em">Volatility skew</span> (equity markets): OTM puts trade at higher implied vol than OTM calls at the same distance from the money. This reflects: (1) demand for tail protection/insurance, (2) realized negative return skew (markets fall faster than they rise), (3) leverage effect (as prices fall, volatility rises). The <span class="term">25-delta risk reversal (RR)</span> = IV(25Δ Put) − IV(25Δ Call) quantifies skew.</p>
+    <p><span class="em">Volatility smile</span> (FX, some commodity markets): Both OTM puts and calls trade at higher IV than ATM options, creating a U-shape. The <span class="term">25-delta butterfly (BF)</span> = ½ × [IV(25Δ Put) + IV(25Δ Call)] − IV(ATM) quantifies this smile premium.</p>
+
+    <h4>Term Structure of Volatility</h4>
+    <p>The vol term structure is typically upward-sloping (long-dated options more expensive) because uncertainty compounds over time. This flattens or inverts when short-term vol spikes (event, crisis). VIX futures term structure is typically in <span class="term">contango</span> — forward vol > spot vol — creating a persistent negative roll yield for long VIX ETPs (e.g., VXX historically lost 60-80%/year in calm markets).</p>
+
+    <h4>Volatility Surface Models</h4>
+    <table class="data-table">
+      <thead><tr><th>Model</th><th>Key Feature</th><th>Use Case</th><th>Limitation</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Heston (1993)</strong></td><td>Stochastic variance process (mean-reverting CIR); correlation between vol and spot</td><td>Equity vol surfaces; captures skew via ρ(vol, spot) parameter</td><td>Does not fit short-dated skew well; computation intensive</td></tr>
+        <tr><td><strong>SABR</strong></td><td>Stochastic α (vol level), correlated with forward; β controls backbone</td><td>Rate options (swaptions, caps/floors); interpolation standard</td><td>Can produce negative densities; not arbitrage-free globally</td></tr>
+        <tr><td><strong>Local Vol (Dupire)</strong></td><td>Deterministic local vol function σ(S,t) fitted to all market prices</td><td>Exotic option pricing consistent with vanilla surface</td><td>Predicts flat forward smile (unrealistic); path-dependent issues</td></tr>
+        <tr><td><strong>Rough Vol (Bergomi/Gatheral)</strong></td><td>Fractional Brownian motion for vol; Hurst exponent H&lt;0.5</td><td>Best fit to short-dated SPX skew; term structure shape</td><td>Complex calibration; limited analytic tractability</td></tr>
+        <tr><td><strong>Stochastic-Local Vol</strong></td><td>Hybrid: local vol backbone + stochastic vol overlay</td><td>Exotic options needing vanilla calibration + realistic dynamics</td><td>Over-parameterized; calibration non-unique</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §14 EXOTIC OPTIONS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="exotics">
+  <div class="section-header">
+    <div class="section-tag">§14 — Derivatives</div>
+    <h2>Exotic Options</h2>
+    <p class="section-intro">Exotic options modify the payoff structure of vanilla options to achieve specific hedging or speculative objectives at lower premium cost. The tradeoff is always increased complexity, path-dependence, and model risk.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Key Exotic Structures</h3>
+    <table class="data-table">
+      <thead><tr><th>Exotic Type</th><th>Payoff Structure</th><th>Use Case</th><th>Key Risk</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Barrier Options</strong></td><td>Knock-in: option activated if spot crosses barrier. Knock-out: option ceases if spot crosses barrier</td><td>Cheaper premium than vanilla; used in FX and equity structured products</td><td class="coral">Gamma explosion near barrier; pin risk; dealer must hedge discontinuous delta</td></tr>
+        <tr><td><strong>Asian Options</strong></td><td>Payoff based on average spot price over period, not final spot</td><td>Commodity hedging (oil companies hedging monthly production); reduces manipulation risk</td><td class="gold">Path-dependent; lower vol than vanilla (averaging effect); early averaging locks in losses</td></tr>
+        <tr><td><strong>Digital / Binary</strong></td><td>Pay fixed amount if spot is above/below strike at expiry; zero otherwise</td><td>Event risk hedging; embedded in structured products; prediction market</td><td class="coral">Extreme delta near strike at expiry (delta spike); dealers must superhedge with vanilla spread</td></tr>
+        <tr><td><strong>Lookback Options</strong></td><td>Strike or payoff set to optimal (max/min) price realized over the period</td><td>Perfect hindsight hedge; compensation products</td><td class="gold">Very expensive; path-dependent; model-sensitive to vol term structure</td></tr>
+        <tr><td><strong>Variance Swap</strong></td><td>Pays realized variance minus strike variance (notional × [σ²_R − K²_var])</td><td>Pure volatility exposure; no delta hedging needed; institutional vol trading</td><td class="coral">Convex payoff in realized vol — short variance = unlimited loss in extreme vol spike (2008)</td></tr>
+        <tr><td><strong>Volatility Swap</strong></td><td>Pays realized vol minus strike vol (linear in vol, not variance)</td><td>Cleaner vol P&L; avoids convexity; convexity adjustment vs variance swap</td><td class="gold">No model-free replication unlike variance swap; requires vol of vol assumptions</td></tr>
+        <tr><td><strong>Cliquets / Ratchets</strong></td><td>Series of forward-starting options; each sets strike at then-current spot</td><td>Structured product embedded payoffs; capital protection with participation</td><td class="coral">Exposure to forward skew dynamics; forward vol surface uncertainty</td></tr>
+        <tr><td><strong>Rainbow / Basket Options</strong></td><td>Payoff depends on multiple underlyings (e.g., best-of, worst-of)</td><td>Cross-asset structured products; equity-linked notes</td><td class="coral">Correlation risk is dominant; correlation is unstable and hard to hedge</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout risk">
+      <div class="callout-tag">Model Risk Alert</div>
+      <p><strong>Barrier options and dealer hedging</strong>: A dealer short a knock-out barrier faces a massive delta discontinuity at the barrier. As spot approaches, delta swings from positive to very negative (dealer must sell more and more underlying to stay hedged). Market makers defending barriers can cause self-fulfilling price cascades — the spot is "pulled" to the barrier by dealer hedging activity. In FX markets, large barrier levels are published, creating focal points for market action around key levels.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §15 INTEREST RATE SWAPS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="irs">
+  <div class="section-header">
+    <div class="section-tag">§15 — Swaps & OTC</div>
+    <h2>Interest Rate Swaps</h2>
+    <p class="section-intro">The interest rate swap (IRS) market is the largest derivatives market in the world by notional — exceeding $500 trillion. A vanilla IRS exchanges a fixed rate for a floating rate on a notional principal. Pricing, risk management, and usage cut across every institutional sector.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>IRS Mechanics & Pricing</h3>
+    <p>In a plain vanilla IRS, one party pays a fixed rate (the <span class="em">swap rate</span>) and receives a floating rate (SOFR, SONIA, €STR), or vice versa, on a notional principal over an agreed tenor. No notional is exchanged. Payments are netted on settlement dates (typically quarterly or semi-annually).</p>
+
+    <div class="formula-block">
+      <div class="f-title">IRS Pricing — Par Swap Rate</div>
+      At inception, a fairly-priced swap has zero market value (NPV = 0):<br><br>
+      Fixed Leg PV = Σ [c × τᵢ × DF(tᵢ)]<br>
+      Floating Leg PV = Σ [f(tᵢ₋₁,tᵢ) × τᵢ × DF(tᵢ)]  ≈  1 − DF(tₙ)  [for LIBOR/SOFR strips]<br><br>
+      Par Swap Rate: c = [1 − DF(tₙ)] / Σ [τᵢ × DF(tᵢ)]<br><br>
+      <div class="f-var">
+        <span>DF(t)</span> = discount factor for time t | <span>τᵢ</span> = day count fraction for period i | <span>f</span> = forward rate
+      </div>
+    </div>
+
+    <h4>DV01 of a Swap</h4>
+    <p>A receiver swap (receive fixed, pay floating) has positive duration — gains when rates fall. A payer swap (pay fixed, receive floating) has negative duration — gains when rates rise. DV01 of a 10Y swap ≈ $900 per $1M notional per basis point. This makes swaps extremely capital-efficient for duration management — a pension fund can add $100M notional of 30Y receiver swaps for a fraction of the cost of buying $100M of 30Y bonds.</p>
+
+    <h4>Swap Curve vs. Treasury Curve</h4>
+    <p>The <span class="term">swap spread</span> (swap rate minus equivalent maturity Treasury yield) reflects: (1) bank credit risk (pre-crisis positive), (2) supply/demand for fixed receivers from pensions/insurance, (3) balance sheet constraints on dealers to intermediate. Post-2008, US 30Y swap spreads turned negative — meaning 30Y swap rates fell below Treasury yields — due to heavy receiving from pension funds and dealer constraints. This was a structural, not transient, phenomenon.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §16 CREDIT DEFAULT SWAPS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="cds">
+  <div class="section-header">
+    <div class="section-tag">§16 — Swaps & OTC</div>
+    <h2>Credit Default Swaps</h2>
+    <p class="section-intro">A Credit Default Swap (CDS) is an insurance contract on credit risk. The protection buyer pays a periodic premium (the CDS spread, in basis points per annum) and receives a payment if the reference entity experiences a credit event (default, restructuring, failure to pay). CDS allow credit risk to be traded independently of interest rate risk.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>CDS Pricing & Mechanics</h3>
+    <div class="formula-block">
+      <div class="f-title">CDS Valuation</div>
+      CDS Spread (s) = Premium Leg / Protection Leg<br><br>
+      Protection Leg PV = (1 − R) × Σ [P(default in period i) × DF(tᵢ)]<br>
+      Premium Leg PV   = s × Σ [P(survival to tᵢ) × τᵢ × DF(tᵢ)]<br><br>
+      At inception: Protection Leg PV = Premium Leg PV  →  solve for fair spread s<br><br>
+      Hazard Rate (λ) links default probability: P(survival to t) = e^(−λt)<br>
+      Approximate: CDS Spread ≈ (1 − R) × λ  →  λ = s / (1 − R)
+      <div class="f-var">
+        <span>R</span> = assumed recovery rate (typically 40% for senior unsecured) | Spread quoted in bps/year
+      </div>
+    </div>
+
+    <h4>CDS Index Products</h4>
+    <table class="data-table">
+      <thead><tr><th>Index</th><th>Universe</th><th>Characteristics</th></tr></thead>
+      <tbody>
+        <tr><td><strong>CDX.NA.IG</strong></td><td>125 investment-grade North American corporate names</td><td>Most liquid USD credit benchmark; new series each March & September; 5Y on-the-run</td></tr>
+        <tr><td><strong>CDX.NA.HY</strong></td><td>100 high-yield North American names</td><td>Quoted as price (not spread); cross-asset with equity via correlation</td></tr>
+        <tr><td><strong>iTraxx Europe</strong></td><td>125 investment-grade European corporates</td><td>EUR-denominated; 5Y and 10Y on-the-run; Markit/IHS administered</td></tr>
+        <tr><td><strong>iTraxx Xover</strong></td><td>75 sub-investment-grade European names</td><td>Highly liquid HY credit benchmark for Europe</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout risk">
+      <div class="callout-tag">Historical Context</div>
+      <p><strong>CDS in 2008 and the Greek crisis</strong>: CDS on AIG's super-senior CDO tranches (the "London whale" before the London whale) created an off-balance-sheet liability that nearly collapsed the global financial system. AIG sold protection on $440B of CDO assets; when they were downgraded, collateral calls triggered a liquidity crisis. The Greek CDS restructuring of 2011-2012 raised definitional questions about what constitutes a credit event — the voluntary PSI (Private Sector Involvement) was initially ruled NOT to trigger CDS by ISDA, causing a near-collapse of the CDS market as a hedging tool before being reversed.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §17 CROSS-CURRENCY SWAPS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="xccy">
+  <div class="section-header">
+    <div class="section-tag">§17 — Swaps & OTC</div>
+    <h2>Cross-Currency Swaps & Basis</h2>
+    <p class="section-intro">Cross-currency swaps exchange both interest payments and principal in two different currencies. They are the primary instrument for long-term FX hedging and reveal the cross-currency basis — the deviation from covered interest rate parity that reflects funding cost differentials between currencies.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Cross-Currency Basis & Covered Interest Rate Parity</h3>
+    <div class="formula-block">
+      <div class="f-title">Covered Interest Rate Parity (CIP) — The Theoretical Anchor</div>
+      F/S = (1 + r_domestic) / (1 + r_foreign)    [discrete]<br>
+      ln(F/S) = r_domestic − r_foreign              [continuous]<br><br>
+      CIP states: forward premium = interest rate differential<br>
+      If violated, riskless arbitrage profit exists<br><br>
+      Cross-Currency Basis (xccy basis) = Deviation from CIP<br>
+      Observed: Forward Rate_mkt = S × (1 + r_d + basis_d) / (1 + r_f + basis_f)<br><br>
+      <div class="f-var">
+        Negative USD xccy basis (e.g., EUR/USD xccy basis = −30bps) means: borrowing USD via FX swap costs <span>30bps more</span> than direct USD borrowing. This is structural, not arbitrage.
+      </div>
+    </div>
+
+    <p>CIP should hold in theory — if it doesn't, a riskless arbitrage exists. In practice, CIP violations (cross-currency basis) persist because the "arbitrage" requires: (1) balance sheet capacity (costly post-Basel III), (2) counterparty credit lines, (3) regulatory capital. USD demand from non-US banks (European, Japanese) borrowing dollars via FX swaps creates persistent negative basis — meaning the dollar is "expensive" on the swap market.</p>
+
+    <div class="callout inst">
+      <div class="callout-tag">Institutional Use</div>
+      <p><strong>Japanese life insurers and USD basis</strong>: JGBs yield near zero; USD Treasuries yield 4-5%. Japanese institutions buy USD Treasuries and hedge the FX exposure via USD/JPY cross-currency swaps. The hedging cost (USD xccy basis + interest rate differential cost) determines whether the trade is profitable. When USD basis is very negative (−100bps), the fully-hedged USD Treasury yield can be near or below JGB yields — making the trade uneconomical and forcing either unhedged exposure or repatriation. This is a major driver of capital flow dynamics between Japan and the US.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §18 OTC INFRASTRUCTURE -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="otc-infra">
+  <div class="section-header">
+    <div class="section-tag">§18 — Swaps & OTC</div>
+    <h2>OTC Infrastructure: ISDA, CSA & Clearing</h2>
+    <p class="section-intro">OTC derivative contracts exist within a legal, operational, and collateral infrastructure that is as important as the instrument itself. The ISDA Master Agreement, Credit Support Annex, and post-GFC clearing mandates define the actual risk of any OTC transaction.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>ISDA Framework</h3>
+    <p>The <span class="em">ISDA Master Agreement</span> is the foundational legal document governing all OTC derivative transactions between two counterparties. Key provisions: (1) <span class="term">Netting</span> — in a default, all transactions under the agreement are collapsed into a single net obligation, reducing counterparty exposure dramatically; (2) <span class="term">Close-out netting</span> — upon default, the non-defaulting party can terminate all trades and calculate a single net payment; (3) <span class="term">Events of Default and Termination Events</span> — defines what triggers close-out.</p>
+
+    <p>The <span class="em">Credit Support Annex (CSA)</span> governs collateral posting between parties. Key CSA terms: (1) <span class="term">Eligible collateral</span> — what can be posted (cash, Treasuries, agency bonds; haircuts apply); (2) <span class="term">Threshold</span> — amount of uncollateralized exposure permitted before margin calls begin (typically $0 for financial institutions post-GFC); (3) <span class="term">MTA (Minimum Transfer Amount)</span> — smallest collateral movement required; (4) <span class="term">ISDA SIMM</span> — the standard model for initial margin in bilateral (non-cleared) swaps under BCBS-IOSCO UMR rules.</p>
+
+    <h4>Clearing Mandate (Dodd-Frank / EMIR)</h4>
+    <p>Post-2008, regulators mandated CCP clearing for standardized OTC derivatives (vanilla IRS, index CDS) to reduce systemic bilateral counterparty risk. Bespoke, illiquid, or custom-tailored trades remain bilateral. The clearing mandate created a two-tier OTC market: cleared (lower counterparty risk, margin required, standardized) and uncleared (bilateral, higher capital charge, SIMM margin under UMR).</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §19 FX MARKETS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="fx-spot">
+  <div class="section-header">
+    <div class="section-tag">§19 — Foreign Exchange</div>
+    <h2>FX Spot & Forwards</h2>
+    <p class="section-intro">FX is the largest and most liquid market in the world — $7.5 trillion per day in 2022 BIS data. It is entirely OTC, runs 24/5 across global time zones, and involves a complex ecosystem of dealers, ECNs, central banks, and end-users. FX prices every cross-border transaction, investment, and trade flow.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>FX Market Structure</h3>
+    <p>FX market operates in a two-tier structure: (1) the <span class="em">interdealer market</span> — large banks transact with each other via voice brokers (EBS, Reuters) and electronic platforms (EBS, Reuters Matching, CME FX Link); (2) the <span class="em">dealer-to-client market</span> — banks quote to corporates, asset managers, and hedge funds via voice, electronic platforms (FXall, 360T, Bloomberg FX), and APIs.</p>
+
+    <h4>FX Quoting Conventions</h4>
+    <table class="data-table">
+      <thead><tr><th>Convention</th><th>Example</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Direct Quote</strong></td><td class="mono">USD/INR = 83.50</td><td>Cost of 1 USD in domestic currency (INR)</td></tr>
+        <tr><td><strong>Indirect Quote</strong></td><td class="mono">EUR/USD = 1.0850</td><td>How many USD to buy 1 EUR (USD is the "price currency")</td></tr>
+        <tr><td><strong>Bid-Ask</strong></td><td class="mono">1.0848/1.0852</td><td>Dealer buys EUR at 1.0848, sells EUR at 1.0852; spread = 4 pips</td></tr>
+        <tr><td><strong>Pip</strong></td><td class="mono">0.0001</td><td>1/100th of a cent; smallest conventional move for major pairs</td></tr>
+        <tr><td><strong>Forward Points</strong></td><td class="mono">EUR/USD 1Y: +105 pts</td><td>Added to spot to get 1Y forward rate; reflects interest rate differential</td></tr>
+      </tbody>
+    </table>
+
+    <div class="formula-block">
+      <div class="f-title">FX Forward Pricing from Interest Rate Parity</div>
+      F = S × (1 + r_USD) / (1 + r_EUR)    [discrete, 1 year]<br><br>
+      Forward Points = F − S = S × (r_USD − r_EUR) / (1 + r_EUR)<br><br>
+      Example: EUR/USD spot = 1.0850, USD 1Y rate = 5.25%, EUR 1Y rate = 3.75%<br>
+      F = 1.0850 × (1.0525/1.0375) = 1.0850 × 1.01446 = 1.1007<br>
+      Forward pts = +157 pts → EUR at a premium to USD (EUR interest rates lower)
+    </div>
+
+    <h4>FX Risk: Central Bank Intervention</h4>
+    <p>Central banks intervene in FX markets to (a) defend a peg or band (HKD, SGD), (b) slow excessive appreciation/depreciation, or (c) build/draw down reserves. Intervention can be <span class="term">sterilized</span> (FX purchase offset by domestic liquidity withdrawal — no monetary effect) or <span class="term">unsterilized</span> (allows monetary base to expand). Unsterilized intervention is more powerful but inflationary. The SNB, BOJ, and PBOC are the most active interveners in G10/EM markets.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §20 CARRY & NDF -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="carry">
+  <div class="section-header">
+    <div class="section-tag">§20 — Foreign Exchange</div>
+    <h2>Carry Trades & Non-Deliverable Forwards</h2>
+    <p class="section-intro">Carry trades exploit interest rate differentials across currencies. Non-deliverable forwards (NDFs) allow forward FX hedging in currencies where physical delivery or free FX markets are restricted.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>FX Carry Trade</h3>
+    <p>The carry trade borrows in low-yielding currencies (JPY, CHF) and invests in high-yielding currencies (MXN, BRL, TRY historically). Under Uncovered Interest Rate Parity (UIP), higher-yielding currencies should depreciate to offset the interest differential. UIP fails empirically — the "forward premium puzzle" — high-yield currencies tend to appreciate in calm markets, generating carry profits. However, carry unwinds violently in risk-off environments.</p>
+
+    <div class="formula-block">
+      <div class="f-title">Carry Trade Return Decomposition</div>
+      Return = Interest Differential − FX Depreciation<br><br>
+      Expected Return (Carry) = r_high − r_low  [if UIP fails, exchange rate doesn't move to offset]<br><br>
+      Risk: "Carry crashes" — AUD/JPY lost 35% in 6 weeks in 2008; TRY and BRL periodically collapse<br><br>
+      Sharpe Ratio of carry ≈ 0.4-0.7 (positive but skewed: many small gains, rare large losses)
+    </div>
+
+    <h3>Non-Deliverable Forwards (NDFs)</h3>
+    <p>NDFs are FX forward contracts where settlement is in USD (or another convertible currency) rather than the restricted currency. At maturity, the difference between the contracted forward rate and the official fixing rate is settled in cash. Used for: CNY (offshore USD/CNH is deliverable but onshore USD/CNY is not), INR, BRL, KRW, TWD, IDR, PHP, CLP.</p>
+
+    <div class="callout inst">
+      <div class="callout-tag">Institutional Note</div>
+      <p><strong>Onshore vs offshore spread</strong>: The USD/CNH (offshore deliverable) vs. USD/CNY (onshore fixing) spread reveals capital flow pressures and PBOC policy intentions. When CNH trades weaker than CNY, it signals outflow pressure or expectation of CNY depreciation. The PBOC manages the onshore rate via a daily fixing mechanism with a ±2% band; offshore rates can diverge, creating a two-speed market that institutional investors monitor closely.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §21 COMMODITY MARKETS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="commodities">
+  <div class="section-header">
+    <div class="section-tag">§21 — Commodities</div>
+    <h2>Commodity Markets</h2>
+    <p class="section-intro">Commodity markets sit at the intersection of physical supply/demand and financial speculation. Unlike financial assets, commodities have storage costs, convenience yields, physical delivery constraints, and seasonal patterns. The futures curve shape (contango vs. backwardation) is the central signal of physical market conditions.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Contango, Backwardation & Roll Yield</h3>
+    <div class="formula-block">
+      <div class="f-title">Commodity Forward Curve Dynamics</div>
+      Futures Price: F(t,T) = S(t) × e^[(r + u − y)(T−t)]<br><br>
+      where: u = storage cost, y = convenience yield, r = financing rate<br><br>
+      CONTANGO: F &gt; S (futures above spot) → u &gt; y (storage exceeds convenience yield)<br>
+      Signals: ample supply, low immediate demand, markets well-supplied<br><br>
+      BACKWARDATION: F &lt; S (futures below spot) → y &gt; u (convenience yield exceeds storage cost)<br>
+      Signals: tight physical supply, strong immediate demand, inventory squeeze<br><br>
+      Roll Yield = Return from rolling expiring contract into next expiry<br>
+      In contango: rolling involves selling low (near), buying high (far) → negative roll yield<br>
+      In backwardation: rolling earns positive yield → total return &gt; spot return
+    </div>
+
+    <h4>Commodity Market Structure by Sector</h4>
+    <table class="data-table">
+      <thead><tr><th>Sector</th><th>Key Contracts</th><th>Main Drivers</th><th>Unique Feature</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Energy</strong></td><td>WTI (NYMEX), Brent (ICE), RBOB Gasoline, Natural Gas</td><td>OPEC+, geopolitics, refinery capacity, weather</td><td>Cushing delivery constraints; negative prices possible (storage exhausted, April 2020)</td></tr>
+        <tr><td><strong>Precious Metals</strong></td><td>Gold (COMEX), Silver, Platinum, Palladium</td><td>Real rates, USD, inflation expectations, safe haven demand</td><td>Gold is primarily monetary/financial; silver has industrial demand component</td></tr>
+        <tr><td><strong>Base Metals</strong></td><td>Copper, Aluminum, Zinc, Nickel (LME); also CME</td><td>Chinese industrial demand, supply disruptions, green energy transition</td><td>LME has physical delivery via global warehouse network; warrant system</td></tr>
+        <tr><td><strong>Agriculture</strong></td><td>Corn, Wheat, Soybeans (CBOT); Coffee, Sugar, Cocoa (ICE)</td><td>Weather (La Niña/El Niño), geopolitics (Ukraine-Russia), crop yields</td><td>Strong seasonality; crop year matters; weather derivatives exist</td></tr>
+        <tr><td><strong>Livestock</strong></td><td>Live Cattle, Feeder Cattle, Lean Hogs (CME)</td><td>Herd cycles, feed costs (corn), disease risk</td><td>Cannot be stored (unlike metals); biological cycle constraints</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §22 ENERGY -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="energy">
+  <div class="section-header">
+    <div class="section-tag">§22 — Commodities</div>
+    <h2>Energy Markets & Curve Dynamics</h2>
+    <p class="section-intro">Energy markets — oil, gas, power — are among the most complex in financial markets. They are simultaneously physical logistics problems and speculative vehicles. The April 2020 WTI negative price event demonstrated that when physical reality (Cushing storage exhaustion) meets financial position (passive ETF rolling), extraordinary dislocations occur.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Oil Market Structure</h3>
+    <p><span class="em">Brent Crude</span> (ICE) is the global benchmark — priced at a North Sea delivery point, with cash settlement option. It governs ~70% of global oil trade pricing. <span class="em">WTI</span> (NYMEX/CME) is the US benchmark — physically delivered at Cushing, Oklahoma. The Brent-WTI spread reflects: US export capacity, Cushing storage levels, pipeline infrastructure, and US domestic demand/production dynamics. During the US shale boom (2012-2016), WTI traded at a $5-15 discount to Brent due to inland Cushing bottlenecks.</p>
+
+    <h4>Natural Gas — Extreme Seasonality & Regional Fragmentation</h4>
+    <p>Natural gas markets are highly regional (unlike oil, gas cannot easily move by tanker in non-LNG form). Henry Hub (NYMEX) is the US benchmark. TTF (Title Transfer Facility) is the European benchmark. These markets can diverge massively: in 2022, European TTF gas hit €340/MWh (equivalent to ~$500/barrel oil) post-Ukraine invasion, while US Henry Hub remained near $8-9/MMBtu. The price signal was correct — it rationed European demand and attracted US LNG exports. The spread between US and European prices is an arbitrage constrained by LNG liquefaction and shipping capacity.</p>
+
+    <div class="callout risk">
+      <div class="callout-tag">Tail Risk Event</div>
+      <p><strong>April 20, 2020 — WTI goes negative</strong>: The May 2020 WTI futures contract expired at −$37.63/barrel. The mechanism: Cushing physical storage was near capacity (capacity utilization >90%). Short-dated futures holders had to either arrange physical delivery (impossible with no storage) or close positions by selling. The USO ETF (United States Oil Fund) held massive May contracts and was forced to roll all at once. With no buyers and physical delivery imminent, sellers accepted any price to exit. Lesson: commodity futures delivery mechanics are not theoretical when physical markets are constrained.</p>
+    </div>
+
+    <h3>Gold — The Monetary Metal</h3>
+    <p>Gold's price is primarily driven by: (1) <span class="em">Real interest rates</span> — gold pays no yield, so its opportunity cost is the real rate; falling real rates → gold rises; (2) <span class="em">USD strength</span> — gold is priced in USD; dollar weakness → gold rises (and vice versa); (3) <span class="em">Central bank demand</span> — EM central banks have been net buyers since 2010 as de-dollarization theme; (4) <span class="em">Investment demand</span> — ETF flows (GLD, IAU) drive short-term price action; (5) <span class="em">Jewelry/physical demand</span> — India and China are the largest physical consumers.</p>
+    <div class="formula-block">
+      <div class="f-title">Gold Pricing Intuition</div>
+      Gold ≈ f(−Real Rates, −USD Index, Central Bank Demand, Risk Sentiment)<br><br>
+      When 10Y TIPS yield = −1% vs. +2%: gold is ~$800-1000/oz higher all else equal<br>
+      Regression coefficient: −1% in real rates → approximately +$400-600/oz in gold (non-linear)
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §23 CRYPTO STRUCTURE -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="crypto">
+  <div class="section-header">
+    <div class="section-tag">§23 — Crypto</div>
+    <h2>Crypto Market Structure</h2>
+    <p class="section-intro">Crypto markets are distinct from every other asset class in structure, custody, market making, clearing, and risk. They run 24/7/365, have no circuit breakers, operate without a lender of last resort, and can experience liquidation cascades of extraordinary speed. Treat as a different universe, not a digital equity market.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Crypto Market Structure Fundamentals</h3>
+    <table class="data-table">
+      <thead><tr><th>Dimension</th><th>Traditional Markets</th><th>Crypto Markets</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Trading Hours</strong></td><td>Market hours (e.g., 9:30-4 PM); defined sessions</td><td>24/7/365; no close; weekend gaps can be violent</td></tr>
+        <tr><td><strong>Clearing</strong></td><td>CCP with loss mutualization; T+1 or T+2 settlement</td><td>On-chain: near-instant settlement; exchange: trust-based; no CCP</td></tr>
+        <tr><td><strong>Custody</strong></td><td>Regulated custodians; SIPC insurance; legal title clear</td><td>Self-custody (private keys) or exchange (counterparty risk); FTX is the canonical failure</td></tr>
+        <tr><td><strong>Leverage / Margin</strong></td><td>Reg T (50% equity minimum), portfolio margin for institutions</td><td>Up to 125x on perps; auto-liquidation engines; no phone calls</td></tr>
+        <tr><td><strong>Market Making</strong></td><td>Regulated dealers; FINRA/SEC oversight; continuous quotes</td><td>Mostly algorithmic; DEX AMMs; no regulatory requirement to quote</td></tr>
+        <tr><td><strong>Price Manipulation</strong></td><td>Market manipulation is illegal; SEC/CFTC oversight</td><td>Wash trading, spoofing common historically; regulatory regime evolving</td></tr>
+        <tr><td><strong>Bankruptcy / Default</strong></td><td>Chapter 11/15; organized restructuring; claims hierarchy clear</td><td>Exchange collapse (FTX) → total loss of commingled funds; no analog</td></tr>
+      </tbody>
+    </table>
+
+    <h4>The FTX Collapse — Anatomy of Crypto Contagion</h4>
+    <p>FTX's November 2022 collapse demonstrated the uniquely dangerous combination of: (1) customer assets commingled with proprietary trading (Alameda Research) via a back-door in the accounting; (2) FTT token as "collateral" — a circular structure (Alameda held FTT, FTX was valued based on FTT, Alameda's solvency depended on FTT price); (3) CoinDesk's balance sheet leak triggered a bank run; (4) Binance's offer to acquire and immediate withdrawal created irreversible panic; (5) $8 billion hole became visible within 72 hours. The speed exceeded any traditional bank run. The lesson: in crypto, self-custody or regulated, audited custodians only.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §24 DEFI & PERPS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="defi">
+  <div class="section-header">
+    <div class="section-tag">§24 — Crypto</div>
+    <h2>DeFi & Perpetual Futures</h2>
+    <p class="section-intro">Perpetual futures are the dominant crypto derivative — larger in volume than spot in most crypto pairs. DeFi protocols replicate financial primitives (lending, options, swaps) on-chain with novel mechanisms and novel risks including smart contract exploits, oracle manipulation, and MEV extraction.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Perpetual Futures Mechanics</h3>
+    <p>Perpetual futures (perps) have no expiry date. Price is kept close to spot via a <span class="em">funding rate mechanism</span>: the contract continuously resets, and holders of long/short positions pay or receive funding every 8 hours (Binance, Bybit convention).</p>
+
+    <div class="formula-block">
+      <div class="f-title">Perpetual Futures Funding Rate</div>
+      Funding Rate = Clamp[(Mark Price − Index Price) / Index Price, −0.05%, 0.05%] × Premium + Base Rate<br><br>
+      Practical formula: FR ≈ (TWAP_Perp − TWAP_Spot) / Spot × (1/8)  [per 8-hour period]<br><br>
+      Annualized funding: FR_annual = FR_8h × 3 × 365<br><br>
+      When funding is positive: longs pay shorts → perp > spot → bearish signal (overpaying for longs)<br>
+      When funding is negative: shorts pay longs → perp < spot → bullish signal (shorting expensive)
+      <div class="f-var">
+        Funding rate is effectively the cost of leverage in crypto. During bull markets, BTC funding regularly reaches <span>50-100% annualized</span> — making basis trades (long spot, short perp) profitable.
+      </div>
+    </div>
+
+    <h4>Liquidation Cascades</h4>
+    <p>Because crypto exchanges use auto-liquidation engines (no margin calls, just immediate close of position), large concentrated positions at round-number leverage ratios create predictable liquidation clusters. When price approaches a liquidation cluster, the forced selling depresses price further, triggering the next cluster — creating a cascade. Exchanges publish liquidation heatmaps showing where concentrated positions exist; these become self-fulfilling targets for large players ("liquidation hunting").</p>
+
+    <h3>DeFi — Automated Market Makers (AMMs)</h3>
+    <div class="formula-block">
+      <div class="f-title">Uniswap v2 Constant Product AMM</div>
+      x × y = k    (invariant)<br><br>
+      where x, y = reserves of Token A and Token B; k = constant<br><br>
+      Price of A in terms of B: P_A = y/x<br><br>
+      After swap of Δx for Δy: (x + Δx)(y − Δy) = k<br>
+      → Δy = y × Δx / (x + Δx)    [output for given input]<br><br>
+      Effective Price = Δy/Δx = y/(x + Δx)   [worse than spot price = price impact]
+    </div>
+
+    <p><span class="em">Impermanent Loss (IL)</span> is the primary risk for AMM liquidity providers. If token A appreciates vs. token B, the AMM automatically sells A to buy B as the price moves — LPs end up holding less of the appreciating asset than if they'd simply held. IL = 2√r/(1+r) − 1 where r = price ratio change. If one token 2x's: IL ≈ 5.7%. If it 5x's: IL ≈ 42.3%. IL only "crystallizes" on withdrawal — it's a comparison to a simple hold strategy.</p>
+
+    <div class="callout risk">
+      <div class="callout-tag">DeFi Risk: Oracle Manipulation</div>
+      <p>DeFi protocols rely on price oracles (Chainlink, TWAP-based on-chain prices) to determine liquidation thresholds, collateral values, and derivative payoffs. Oracle manipulation attacks exploit the gap between reported price and true price. In the March 2023 Euler Finance hack ($197M), the attacker used flash loans to inflate an asset's price on the Euler oracle, borrow against it, then repay the flash loan — extracting value that existed only in the manipulated oracle state. Flash loans make capital free within a single block, enabling attacks requiring enormous liquidity that would be impossible in traditional finance.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §25 RISK FRAMEWORK -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="risk">
+  <div class="section-header">
+    <div class="section-tag">§25 — Risk Management</div>
+    <h2>Institutional Risk Framework</h2>
+    <p class="section-intro">Risk management is not about eliminating risk — it is about understanding, measuring, pricing, and taking the right risks in the right amounts. The full framework spans market risk, credit risk, liquidity risk, operational risk, model risk, and tail risk, each requiring distinct measurement approaches.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Market Risk Measurement</h3>
+
+    <h4>Value at Risk (VaR)</h4>
+    <div class="formula-block">
+      <div class="f-title">Value at Risk — Three Approaches</div>
+      VaR(α, T) = maximum loss not exceeded at confidence level α over horizon T<br><br>
+      1. Historical Simulation: sort historical P&Ls; take percentile at (1−α)<br>
+         e.g., 99% 10-day VaR = 1st percentile of 1000 historical 10-day P&Ls<br><br>
+      2. Parametric (Normal): VaR = −(μ − z_α × σ) × √T<br>
+         where z_α = 2.326 for 99%, 1.645 for 95% | σ = portfolio daily vol<br><br>
+      3. Monte Carlo: simulate thousands of scenarios; take percentile of distribution<br><br>
+      <div class="f-var">
+        <span>Basel III</span> requires 99% 10-day VaR; <span>FRTB</span> shifts to Expected Shortfall (ES) at 97.5%
+      </div>
+    </div>
+
+    <h4>Expected Shortfall (CVaR)</h4>
+    <p>VaR tells you the threshold — not what lies beyond it. <span class="term">Expected Shortfall (ES)</span>, also called Conditional VaR (CVaR), is the expected loss <em>given</em> that loss exceeds VaR: ES = E[Loss | Loss > VaR]. ES is a coherent risk measure (unlike VaR); it is sub-additive (a portfolio's ES ≤ sum of component ES). Basel's Fundamental Review of the Trading Book (FRTB) mandated ES at 97.5% replacing VaR at 99%, recognizing ES better captures tail risk.</p>
+
+    <h4>Stress Testing</h4>
+    <table class="data-table">
+      <thead><tr><th>Stress Scenario</th><th>Key Factor Shocks</th><th>Historical Analogue</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Global Financial Crisis</strong></td><td>Equities −40-50%; credit spreads +500bps; interbank markets freeze; USD surges</td><td>2008-2009</td></tr>
+        <tr><td><strong>COVID Crash</strong></td><td>Equities −35% in 3 weeks; VIX 85; IG spreads +200bps; EM FX collapse; oil −60%</td><td>Feb-Mar 2020</td></tr>
+        <tr><td><strong>Rate Spike</strong></td><td>Parallel yield curve shift +200-300bps; equity P/E compression; real estate crash</td><td>2022 analog</td></tr>
+        <tr><td><strong>EM Contagion</strong></td><td>EM currency collapse 20-40%; EM spreads +800bps; DM risk-off flight</td><td>1997-98 Asian crisis, 2018</td></tr>
+        <tr><td><strong>Liquidity Crisis</strong></td><td>Bid-ask spreads 10x; repo markets seize; mark-to-market losses exceed margin</td><td>LTCM 1998; March 2020</td></tr>
+        <tr><td><strong>Stagflation</strong></td><td>High inflation + negative real growth; equities and bonds both fall; commodities up</td><td>1970s; 2022 partial</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Risk Aggregation & Factor Decomposition</h4>
+    <p>Modern risk systems decompose portfolio risk along factor axes: (1) <span class="em">Rate risk</span> (DV01 by bucket); (2) <span class="em">Spread risk</span> (CS01 by rating/issuer); (3) <span class="em">Equity risk</span> (beta-adjusted, sector); (4) <span class="em">Vol risk</span> (vega by tenor and strike); (5) <span class="em">FX risk</span> (delta by currency pair); (6) <span class="em">Convexity risk</span> (gamma, convexity). The correlation structure between these factors during stress (when correlations go to 1 in the wrong direction) is the ultimate model limitation.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Risk Dimensions</h3>
+    <div class="risk-grid">
+      <div class="risk-cell high">
+        <div class="r-label">Counterparty</div>
+        <div class="r-title">Credit Risk</div>
+        <div class="r-body">Loss if counterparty defaults on OTC contract. Managed via CSA, CCP clearing, and netting agreements.</div>
+      </div>
+      <div class="risk-cell high">
+        <div class="r-label">Market</div>
+        <div class="r-title">Liquidity Risk</div>
+        <div class="r-body">Cannot exit position at fair value under stress. Bid-ask spread widens; size creates market impact.</div>
+      </div>
+      <div class="risk-cell high">
+        <div class="r-label">Operational</div>
+        <div class="r-title">Settlement Risk</div>
+        <div class="r-body">Herstatt risk: delivered currency not received if counterparty fails between close of day in different time zones.</div>
+      </div>
+      <div class="risk-cell med">
+        <div class="r-label">Structural</div>
+        <div class="r-title">Basis Risk</div>
+        <div class="r-body">Hedge does not move 1:1 with exposure. ETF vs. underlying, futures vs. spot, CDS index vs. single name.</div>
+      </div>
+      <div class="risk-cell med">
+        <div class="r-label">Modeling</div>
+        <div class="r-title">Model Risk</div>
+        <div class="r-body">Systematic mis-specification of pricing or risk model. Calibration to stale data. Regime change invalidates assumptions.</div>
+      </div>
+      <div class="risk-cell med">
+        <div class="r-label">Macro</div>
+        <div class="r-title">Event Risk</div>
+        <div class="r-body">Discrete, unpredictable events: election outcomes, central bank surprises, geopolitical shocks, natural disasters.</div>
+      </div>
+      <div class="risk-cell low">
+        <div class="r-label">Structural</div>
+        <div class="r-title">Roll Risk</div>
+        <div class="r-body">Futures or swap must be rolled; forward price at roll may be unfavorable (contango for commodity ETFs).</div>
+      </div>
+      <div class="risk-cell low">
+        <div class="r-label">Regulatory</div>
+        <div class="r-title">Legal / Jurisdiction</div>
+        <div class="r-body">Netting enforceability varies. ISDA netting not recognized in all jurisdictions. Regulatory change risk.</div>
+      </div>
+      <div class="risk-cell high">
+        <div class="r-label">Non-Linear</div>
+        <div class="r-title">Tail / Gap Risk</div>
+        <div class="r-body">Losses beyond VaR threshold. Fat tails not captured by normal distribution. Extreme moves gap through stops.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §26 PORTFOLIO CONSTRUCTION -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="portfolio">
+  <div class="section-header">
+    <div class="section-tag">§26 — Portfolio</div>
+    <h2>Portfolio Construction</h2>
+    <p class="section-intro">Portfolio construction translates views and constraints into a holdings structure that balances expected return, risk, diversification, and implementation cost. From Markowitz to factor models to risk parity — each framework makes different assumptions about what drives returns and how to weight them.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>Mean-Variance Optimization</h3>
+    <div class="formula-block">
+      <div class="f-title">Markowitz Optimization Problem</div>
+      Minimize: wᵀΣw    [portfolio variance]<br>
+      Subject to: wᵀμ ≥ target return; wᵀ1 = 1; w ≥ 0 (long-only) or unrestricted (long-short)<br><br>
+      where: w = weight vector, Σ = covariance matrix, μ = expected return vector<br><br>
+      Efficient Frontier: set of (μ_p, σ_p) combinations that minimize risk for each return level<br><br>
+      Sharpe Ratio: SR = (μ_p − r_f) / σ_p    [maximize for optimal risky portfolio]
+    </div>
+
+    <div class="callout risk">
+      <div class="callout-tag">The Estimation Problem</div>
+      <p>Mean-variance optimization is extremely sensitive to input assumptions, especially expected returns. Michaud (1989) showed that MVO "maximizes estimation error" — small changes in expected return assumptions produce wildly different portfolios. In practice: Black-Litterman (1990) is the institutional solution — it combines market equilibrium returns (implied by market cap weights) with investor views via Bayesian updating, producing more stable and less extreme portfolios. Robustness constraints (max weight, min weight, tracking error limits) further stabilize the solution.</p>
+    </div>
+
+    <h3>Factor Models</h3>
+    <p>Return attribution and portfolio construction using factor exposures:</p>
+    <div class="formula-block">
+      <div class="f-title">Multi-Factor Return Model (Fama-French + Momentum)</div>
+      Rᵢ − Rf = αᵢ + βᵢ,MKT × (Rm − Rf) + βᵢ,SMB × SMB + βᵢ,HML × HML + βᵢ,MOM × MOM + εᵢ<br><br>
+      Common equity factors and their institutional interpretation:<br>
+      ├── Market (β): systematic exposure to equity market<br>
+      ├── Size (SMB): small cap premium; compensation for liquidity risk<br>
+      ├── Value (HML): cheap stocks vs. expensive; mean reversion premium<br>
+      ├── Momentum (MOM): recent winners beat recent losers; persistence premium<br>
+      ├── Quality: profitable, stable businesses; defensive premium<br>
+      ├── Low Vol: lower-beta stocks outperform on risk-adjusted basis (anomaly)
+    </div>
+
+    <h4>Risk Parity</h4>
+    <p>Risk parity portfolios allocate equal <em>risk</em> to each asset class rather than equal capital. Since bonds have much lower volatility than equities, a 60/40 portfolio has ~90% of its risk concentrated in equities. Risk parity uses leverage on bonds to equalize contributions. The Bridgewater "All Weather" portfolio popularized this approach. Key vulnerability: when bonds and equities become positively correlated (as in 2022), risk parity loses its diversification benefit precisely when needed most.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §27 CROSS-ASSET LINKAGES -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section" id="cross-asset">
+  <div class="section-header">
+    <div class="section-tag">§27 — Cross-Asset</div>
+    <h2>Cross-Asset Linkages & Transmission Channels</h2>
+    <p class="section-intro">No asset class exists in isolation. The connections between rates, equities, credit, FX, and commodities define how macro shocks transmit through the financial system — and create the cross-asset opportunities and risks that define institutional portfolio management at the highest level.</p>
+  </div>
+
+  <div class="subsection">
+    <h3>The Rate-Equity Nexus</h3>
+    <p>The relationship between rates and equities is regime-dependent — one of the most important and most misunderstood facts in cross-asset analysis.</p>
+
+    <table class="data-table">
+      <thead><tr><th>Regime</th><th>Rates-Equity Correlation</th><th>Mechanism</th><th>Historical Period</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Deflationary crisis</strong></td><td class="green">Negative (risk-off safe haven)</td><td>Equity falls → flight to bonds → rates fall. Classic 60/40 diversification works.</td><td>2001-2021 (mostly)</td></tr>
+        <tr><td><strong>Inflationary regime</strong></td><td class="coral">Positive (both fall together)</td><td>Rates rise (inflation fight) → discount rates up → equities fall via multiple compression. Bonds AND equities down.</td><td>1970s; 2022</td></tr>
+        <tr><td><strong>Strong growth, contained inflation</strong></td><td class="gold">Neutral to negative</td><td>Growth supports earnings; rates rise modestly but earnings offset the multiple compression. "Goldilocks."</td><td>1995-2000; 2013-2019 (periods)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Commodity-Currency Relationships</h3>
+    <p>Commodity-exporting countries' currencies are correlated with their major commodity exports: AUD and iron ore/copper, CAD and WTI crude, BRL and iron ore/soybeans, NOK and Brent crude, RUB and oil/gas. These correlations are exploitable but break down during risk-off events when all EM/commodity currencies fall together regardless of commodity prices.</p>
+
+    <h3>The Credit-Equity Interface</h3>
+    <div class="formula-block">
+      <div class="f-title">Merton Model — Credit as Options</div>
+      Under Merton (1974): equity = call option on firm assets (A) with strike = debt face value (D)<br><br>
+      Equity Value = A × N(d₁) − D × e^(−rT) × N(d₂)<br>
+      Debt Value (risky) = D × e^(−rT) − Put(A, D, r, σ_A, T)<br><br>
+      Credit Spread ≈ −(1/T) × ln[N(d₂) + (A/D × e^(rT)) × N(−d₁)]<br><br>
+      Implication: <span>equity vol ↑ → credit spreads widen</span><br>
+      Capital structure arbitrage: if equity implies higher leverage than CDS prices, there's a relative value trade
+    </div>
+
+    <h3>The USD as the Global Risk Factor</h3>
+    <p>The US Dollar occupies a unique position as the global reserve currency and primary funding currency. When risk-off episodes occur: USD strengthens → EM currencies weaken → EM dollar-denominated debt becomes more expensive to service → credit conditions tighten → EM central banks raise rates or deploy FX reserves → capital outflows accelerate. This feedback loop amplifies global financial conditions beyond US borders. The Dollar Milkshake theory (Brent Johnson) argues this dynamic accelerates in a rate tightening cycle, creating dollar scarcity globally while the US economy is relatively insulated.</p>
+
+    <h3>The VIX-Equity-Credit-Repo Chain</h3>
+    <div class="flow">
+      <div class="flow-node coral">Risk event / shock</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">VIX spikes (panic buying of puts)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">Dealer gamma flips negative (now short gamma market-wide)</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">Dealers sell equities to re-hedge → amplifies decline</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node coral">Credit spreads widen; repo haircuts rise; margin calls → forced selling</div>
+    </div>
+    <p>This transmission chain — from a volatility spike through dealer hedging to forced deleveraging — is the mechanism behind nearly every major market crash of the last 30 years. It is why VIX spikes are not just a sentiment indicator but a structural driver of equity market moves. Recognizing when dealer positioning flips (the "GEX" — gamma exposure index) from positive to negative gamma is the key to anticipating amplification vs. dampening of equity moves.</p>
+
+    <div class="callout key">
+      <div class="callout-tag">Bottom Line — Cross-Asset</div>
+      <p>The most dangerous period in financial markets is when correlations across asset classes converge to +1 during stress (everything falls together) while your portfolio was built on diversification assumptions of negative or zero correlations. Liquidity crises, margin cascades, and the USD funding squeeze combine to transmit shocks globally and simultaneously. The antidote is not more diversification within the same correlation regime — it is explicit tail hedges, regime-aware positioning, and maintaining liquidity buffers large enough to absorb margin calls without forced selling at the worst prices.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="border-top:1px solid var(--border);padding-top:32px;margin-top:40px;text-align:center;">
+  <div style="font-family:var(--font-mono);font-size:11px;color:var(--text3);line-height:2.2;">
+    FINANCIAL MARKETS: COMPLETE INSTITUTIONAL REFERENCE<br>
+    All asset classes · All instruments · All risk dimensions<br>
+    <span style="color:var(--border2);">───────────────────────────────────────────</span><br>
+    Data and formulas for educational reference. Not investment advice.<br>
+    Market structures, regulations, and instruments evolve — verify current details with primary sources.
+  </div>
+</div>
+
+</div>
+</main>
+
+<script>
+function scrollTo(id) {
+  document.getElementById(id).scrollIntoView({behavior: 'smooth', block: 'start'});
+  document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+function filterNav(query) {
+  const q = query.toLowerCase();
+  document.querySelectorAll('.nav-item').forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = (!q || text.includes(q)) ? '' : 'none';
+  });
+  document.querySelectorAll('.nav-section').forEach(section => {
+    const visible = [...section.querySelectorAll('.nav-item')].some(i => i.style.display !== 'none');
+    section.style.display = visible ? '' : 'none';
+  });
+}
+
+// Highlight active section on scroll
+const sections = document.querySelectorAll('.section');
+const navItems = document.querySelectorAll('.nav-item');
+const main = document.getElementById('main');
+main.addEventListener('scroll', () => {
+  const scrollTop = main.scrollTop + 80;
+  let current = '';
+  sections.forEach(s => { if (scrollTop >= s.offsetTop) current = s.id; });
+  if (current) {
+    navItems.forEach(b => {
+      b.classList.toggle('active',
+        b.getAttribute('onclick') && b.getAttribute('onclick').includes(`'${current}'`));
+    });
+  }
+});
+</script>
+</body>
+</html>
